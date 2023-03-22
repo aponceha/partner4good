@@ -1,23 +1,29 @@
-// from activity 21.28
+// from activity 21.20
 import { gql } from '@apollo/client';
 
-export const QUERY_TECH = gql`
-  query tech {
-    tech {
+export const QUERY_THOUGHTS = gql`
+  query getThoughts {
+    thoughts {
       _id
-      name
+      thoughtText
+      thoughtAuthor
+      createdAt
     }
   }
 `;
 
-export const QUERY_MATCHUPS = gql`
-  query matchups($_id: String) {
-    matchups(_id: $_id) {
+export const QUERY_SINGLE_THOUGHT = gql`
+  query getSingleThought($thoughtId: ID!) {
+    thought(thoughtId: $thoughtId) {
       _id
-      tech1
-      tech2
-      tech1_votes
-      tech2_votes
+      thoughtText
+      thoughtAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
     }
   }
 `;

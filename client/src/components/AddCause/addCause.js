@@ -3,7 +3,6 @@ import './addCause.css';
 
 const styles = {
     background: {
-        background: 'rgb(246, 232, 226)',
         overflow: 'scroll'
     }
 }

@@ -13,7 +13,6 @@ export default function App() {
     return (
         <div class="App" >
             <div class="vh-100">
-                Hello World
                 <Nav />
                     <Routes>
                         <Route path='/' element={<About />} />

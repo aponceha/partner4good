@@ -1,16 +1,17 @@
 import React from 'react';
-import './login.css';
+import './partners.css';
 
 const styles = {
     background: {
+        background: 'rgb(246, 232, 226)',
         overflow: 'scroll'
     }
 }
 
-export default function Login() {
+export default function Partners() {
     return (
         <div class="h-100" style={styles.background}>
-            <h2>Login</h2>
+            <h2>Partners</h2>
         </div>
     )
 }

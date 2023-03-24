@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css';
+import './addCause.css';
 
 const styles = {
     background: {
@@ -7,10 +7,10 @@ const styles = {
     }
 }
 
-export default function Login() {
+export default function AddCause() {
     return (
         <div class="h-100" style={styles.background}>
-            <h2>Login</h2>
+            <h2>Add Cause</h2>
         </div>
     )
 }

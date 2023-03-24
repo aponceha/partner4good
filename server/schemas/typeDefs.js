@@ -1,5 +1,5 @@
-// from activity 21.28
-const { gql } = require('apollo-server-express');
+// // from activity 21.28
+// const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User {

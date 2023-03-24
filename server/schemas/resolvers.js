@@ -1,29 +1,34 @@
 // from activity 21.28
-const { Tech, Matchup } = require('../models');
+const { UserModel, CategoryModel, CauseModel } = require('../models');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    // <name>: <controller>
+    user:  async (parent, args, context) => {
+      // const user = await User.create(args);
+      // const token = signToken(user);
+      // return { token, user };
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+    causes:  async (parent, args, context) => {},
+    categories:  async (parent, args, context) => {},
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
+    createUser: async (parent, { email, password }, context) => {},
+    login: async (parent, { email, password }, context) => {},
+
+    createCause: async (parent, {
+      name, description,
+      address,
+      contactName, 
+      categoryId,
+      websiteLink }, context) => {},
+    editCause: async (parent, {
+      name, description,
+      address,
+      contactName, 
+      categoryId,
+      websiteLink }, context) => {},
+    deleteCause: async (parent, { causeId }, context) => {},
   },
 };
 

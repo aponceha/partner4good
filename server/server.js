@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.get("*", (req, res) => {
-  console.log('html path');
   res.send("Not found");
 });
 

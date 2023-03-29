@@ -54,15 +54,29 @@ CATEGORY
 - [Questions](#questions)
 
 ## Installation
+- Clone the repo
+  ```sh
+  git clone git@github.com:MadelineLowes/partner-for-good.git
+  ```
+- Install dependencies
+  ```sh
+  npm install
+  ```
+  
+- Seed table to the database:
 
+  ```sh
+    npm run seed
+  ```
 
-
-
+- Start the app:
+  ```sh
+    npm start
+  ```
 
 ## Usage
 
-
-
+Users can get the most out of this app if they are registered with an account, however unregistered users are still able to browse the homepage, categories & posts. Once users have registered and/or logged into their account, they can interact with others by writing their own posts, as well as liking & commenting on other users' posts.
 
 ## Credits
 

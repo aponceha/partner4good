@@ -51,7 +51,7 @@ export default function Partners() {
       };
 
     return (
-        <motion.div class="h-100 bodyContainer"
+        <motion.div class="bodyContainer"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -98,7 +98,91 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
+                        > ... See More
+                        </motion.button>
+                    </AnimatePresence>
+                    
+                </div>
+            
+            </motion.div>
+            <motion.div class="pBorder"
+            variants={cardVariants}
+            whileHover = {{ y: -10 } }
+            >
+                <div class="partnerCard">
+                    <img class="imgCard" src={charity1} alt="img" />
+                </div>
+                <div class="descriptionBox">
+                    <p class="partnerP">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim 
+        
+                    </p>
+                    <AnimatePresence>
+                        <motion.button class="seemore"
+                        initial= {{ opacity: 0 }}
+                        animate= {{ opacity: 1 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        >... See More
+                        </motion.button>
+                    </AnimatePresence>
+                    
+                </div>
+            
+            </motion.div>
+            <motion.div class="pBorder"
+            variants={cardVariants}
+            whileHover = {{ y: -10 } }
+            >
+                <div class="partnerCard">
+                    <img class="imgCard" src={charity1} alt="img" />
+                </div>
+                <div class="descriptionBox">
+                    <p class="partnerP">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim 
+        
+                    </p>
+                    <AnimatePresence>
+                        <motion.button class="seemore"
+                        initial= {{ opacity: 0 }}
+                        animate= {{ opacity: 1 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        >... See More
+                        </motion.button>
+                    </AnimatePresence>
+                    
+                </div>
+            
+            </motion.div>
+            <motion.div class="pBorder"
+            variants={cardVariants}
+            whileHover = {{ y: -10 } }
+            >
+                <div class="partnerCard">
+                    <img class="imgCard" src={charity1} alt="img" />
+                </div>
+                <div class="descriptionBox">
+                    <p class="partnerP">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim 
+        
+                    </p>
+                    <AnimatePresence>
+                        <motion.button class="seemore"
+                        initial= {{ opacity: 0 }}
+                        animate= {{ opacity: 1 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        >... See More
                         </motion.button>
                     </AnimatePresence>
                     
@@ -154,91 +238,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
-                        </motion.button>
-                    </AnimatePresence>
-                    
-                </div>
-            
-            </motion.div>
-            <motion.div class="pBorder"
-            variants={cardVariants}
-            whileHover = {{ y: -10 } }
-            >
-                <div class="partnerCard">
-                    <img class="imgCard" src={charity1} alt="img" />
-                </div>
-                <div class="descriptionBox">
-                    <p class="partnerP">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim 
-        
-                    </p>
-                    <AnimatePresence>
-                        <motion.button class="seemore"
-                        initial= {{ opacity: 0 }}
-                        animate= {{ opacity: 1 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
-                        </motion.button>
-                    </AnimatePresence>
-                    
-                </div>
-            
-            </motion.div>
-            <motion.div class="pBorder"
-            variants={cardVariants}
-            whileHover = {{ y: -10 } }
-            >
-                <div class="partnerCard">
-                    <img class="imgCard" src={charity1} alt="img" />
-                </div>
-                <div class="descriptionBox">
-                    <p class="partnerP">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim 
-        
-                    </p>
-                    <AnimatePresence>
-                        <motion.button class="seemore"
-                        initial= {{ opacity: 0 }}
-                        animate= {{ opacity: 1 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
-                        </motion.button>
-                    </AnimatePresence>
-                    
-                </div>
-            
-            </motion.div>
-            <motion.div class="pBorder"
-            variants={cardVariants}
-            whileHover = {{ y: -10 } }
-            >
-                <div class="partnerCard">
-                    <img class="imgCard" src={charity1} alt="img" />
-                </div>
-                <div class="descriptionBox">
-                    <p class="partnerP">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua. Ut enim ad minim 
-        
-                    </p>
-                    <AnimatePresence>
-                        <motion.button class="seemore"
-                        initial= {{ opacity: 0 }}
-                        animate= {{ opacity: 1 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
+                        >... See More
                         </motion.button>
                     </AnimatePresence>
                     

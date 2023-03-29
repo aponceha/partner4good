@@ -13,13 +13,13 @@ const styles = {
 
 export default function Nav() {
     return (
-        <nav class="navbar navbar-expand" style={styles.background}>
-            <div class="container d-flex justify-content-between">
-                <h1 class="col-4 border">Partner for Good.</h1>
-                <div class="container d-flex border justify-content-evenly col-6" >
-                    <NavLink to='/' style={styles.links}> Who we are</NavLink>
-                    <NavLink to='/addCause' style={styles.links}> Add your cause</NavLink>
-                    <NavLink to='/login' style={styles.links}> Login</NavLink>
+        <nav className="nav background" >
+            <div className="navDiv">
+                <h1 className="navH1">Partner for Good.</h1>
+                <div className="navLinks" >
+                    <NavLink to='/' className = "links" > Who we are</NavLink>
+                    <NavLink to='/addCause' className = "links" > Add your cause</NavLink>
+                    <NavLink to='/login' className = "links"> Login</NavLink>
                 </div>
             </div>
 

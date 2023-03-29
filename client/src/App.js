@@ -16,7 +16,7 @@ export default function App() {
 
     return (
         <div class="App" >
-            <div class="vh-100">
+            <div class="">
                 <Nav />
                     <AnimatePresence>
                             <Routes location={location} key={location.key}>

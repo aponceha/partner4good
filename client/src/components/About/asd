@@ -156,7 +156,7 @@ export default function About() {
             
             </motion.div>
 
-            <button class="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
+            <button class="btnSMC" to='/http://localhost:3000/#/partners'> See More Causes</button>
             
             </motion.div>
             </AnimatePresence>

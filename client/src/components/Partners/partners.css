@@ -7,7 +7,6 @@
 
 .partnerContainer {
     background: #0D504C;
-    overflow: scroll;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100vw;
@@ -22,6 +21,7 @@
     align-items: flex-end;
     width: 100%;
     margin-right: 20%;
+    margin-bottom: 10px;
     
 }
 .filter {
@@ -41,8 +41,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: fit-content;
     width: 100%;
+    padding-top: 55px; 
 }
 
 .partnerCard {

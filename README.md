@@ -1,6 +1,4 @@
-# finalproject
-
-
+# Partner For Good
 
 ### Requirements
 
@@ -20,18 +18,16 @@
 8. As a USER, when on the CAUSES Page, I want to have an infinite scroll of CAUSES cards so that I have an easy way to explore them.
 9. A a USER, when on the CAUSES Page, I want to be able to narrow what CAUSES I view by category by clicking a filter dropdown menu. 
 
-
-
-
 #### Domain
 
 USER
+
 - _id: ID
 - email: string
 - password: string
 
-
 CAUSE
+
 - _id: ID
 - name: string
 - description: string
@@ -41,7 +37,73 @@ CAUSE
 - address: string
 - user: ID
 
-
 CATEGORY
+
 - _id: ID
 - name: string
+
+## Description
+
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
+
+## Installation
+
+
+
+
+
+## Usage
+
+
+
+
+## Credits
+
+- Big thanks to ... for their help with this project
+
+## License
+
+This project is covered by MIT licensing.
+https://opensource.org/licenses/MIT
+
+## Questions
+
+Albin Ponce-Ha:
+
+- email: aponceha@gmail.com
+- github profile: https://github.com/aponceha
+
+Madeline Lowes:
+
+- email: madeline.e.lowes@gmail.com
+- github profile: https://github.com/MadelineLowes
+
+Max Schwartz
+
+- email: max@marbl.app
+- github profile: https://github.com/The-Schwiz
+
+Robert Iatan:
+
+- email: robertiatan@gmail.com
+- github profile: https://github.com/robertiatan
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/MadelineLowes/partner-for-good.svg?style=for-the-badge
+[contributors-url]: https://github.com/MadelineLowes/partner-for-good/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/MadelineLowes/partner-for-good.svg?style=for-the-badge
+[issues-url]: https://github.com/MadelineLowes/partner-for-good/issues
+[license-shield]: https://img.shields.io/github/license/MadelineLowes/partner-for-good.svg?style=for-the-badge
+[license-url]: https://github.com/MadelineLowes/partner-for-good/blob/main/LICENSE
+[github-shield]: https://img.shields.io/badge/-github-black.svg?style=for-the-badge&logo=github&colorB=555
+[github-url]: https://github.com/MadelineLowes/partner-for-good

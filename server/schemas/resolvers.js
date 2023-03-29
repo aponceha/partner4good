@@ -1,5 +1,5 @@
 // from activity 21.28
-const { UserModel, CategoryModel, CauseModel } = require('../models');
+const { createUser, login } = require('../controllers/users');
 
 const resolvers = {
   Query: {
@@ -13,8 +13,8 @@ const resolvers = {
     categories:  async (parent, args, context) => {},
   },
   Mutation: {
-    createUser: async (parent, { email, password }, context) => {},
-    login: async (parent, { email, password }, context) => {},
+    createUser: createUser,
+    login: login,
 
     createCause: async (parent, {
       name, description,

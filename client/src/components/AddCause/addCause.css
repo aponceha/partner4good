@@ -87,7 +87,9 @@
     align-items:flex-start; */
     aspect-ratio: 16/9;
     max-width: 100%;
-    scale: 0.7;
+    width: auto;
+    height: 300px;
+    scale: 0.8;
 
 
 }

@@ -12,9 +12,10 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     description: String!
-    address: String!
+    headquarters: String!
     category: Category!
     contactName: String!
+    contactEmail: String!
     userId: ID!
     websiteLink: String 
   }
@@ -39,7 +40,7 @@ const typeDefs = gql`
     createUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    createCause(causeInput: CauseInput): Cause!
+    createCause(causeInput: CauseInput!): Cause!
     editCause(causeInput: CauseInput): Cause!
     deleteCause(causeId: ID!): Cause
   }
@@ -47,8 +48,9 @@ const typeDefs = gql`
   input CauseInput {
     name: String!
     description: String!
-    address: String!
+    headquarters: String!
     contactName: String!
+    contactEmail: String!
     categoryId: ID!
     websiteLink: String
   }

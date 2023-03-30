@@ -46,3 +46,28 @@
     padding: 0 1rem;
     text-decoration: none; 
 }
+
+@media screen and (max-width: 768px) {
+    .navH1 {
+        top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navDiv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        padding: 0;
+        height: 120px;
+    }
+    .navLinks {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-right: 0;
+    }
+}

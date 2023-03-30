@@ -71,7 +71,7 @@ export default function Partners() {
         </div>
         
         <AnimatePresence>
-        <motion.div class="h-100 partnerContainer"
+        <motion.div class="partnerContainer"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -210,7 +210,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        > See More
+                        >... See More
                         </motion.button>
                     </AnimatePresence>
                     

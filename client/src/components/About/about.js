@@ -73,7 +73,7 @@ export default function About() {
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard">
+                <div class="partnerCard1">
                     <img class="imgCard1" src={charity3} alt="img" />
                 </div>
                 <div class="descriptionBox1">
@@ -102,7 +102,7 @@ export default function About() {
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard">
+                <div class="partnerCard1">
                     <img class="imgCard1" src={charity4} alt="img" />
                 </div>
                 <div class="descriptionBox1">
@@ -131,7 +131,7 @@ export default function About() {
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard">
+                <div class="partnerCard1">
                     <img class="imgCard1" src={charity6} alt="img" />
                 </div>
                 <div class="descriptionBox1">
@@ -162,7 +162,7 @@ export default function About() {
             </AnimatePresence>
             </div>
             <div className = "wwaDiv">
-                <img className = "i1" src={p4g} alt="placeholder" />
+                <img className = "i1 wwaImg" src={p4g} alt="placeholder" />
                 <h2 className = "h1WWA">Who We Are</h2>
                 <p className="pWWA">
                 Partner for Good is committed to helping good 

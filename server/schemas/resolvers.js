@@ -1,5 +1,6 @@
 // from activity 21.28
-const { UserModel, CategoryModel, CauseModel } = require('../models');
+const { createUser, login } = require('../controllers/users');
+const { createCause, getAllCauses  } = require('../controllers/causes');
 
 const resolvers = {
   Query: {
@@ -9,19 +10,13 @@ const resolvers = {
       // const token = signToken(user);
       // return { token, user };
     },
-    causes:  async (parent, args, context) => {},
+    causes: getAllCauses,
     categories:  async (parent, args, context) => {},
   },
   Mutation: {
-    createUser: async (parent, { email, password }, context) => {},
-    login: async (parent, { email, password }, context) => {},
-
-    createCause: async (parent, {
-      name, description,
-      address,
-      contactName, 
-      categoryId,
-      websiteLink }, context) => {},
+    createUser: createUser,
+    login: login,
+    createCause: createCause, 
     editCause: async (parent, {
       name, description,
       address,

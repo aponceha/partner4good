@@ -15,12 +15,16 @@ const causeSchema = mongoose.Schema({
         type: String,
         required: [true, "Contact name is required"]
     },
+    contactEmail: {
+        type: String,
+        required: [true, "Contact email is required"]
+    },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
         required: [true, "Category is required"]
     },
-    address: {
+    headquarters: {
         type:String,
         required: [true, "Address is required"]
     },

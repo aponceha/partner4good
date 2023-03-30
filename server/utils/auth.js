@@ -12,17 +12,13 @@ module.exports = {
     }
 
     if (!token) {
-      console.log('token not present');
       return req;
     }
-    console.log('token present', token);
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      console.log('verify', data);
       return { user: data };
     } catch (err) {
       console.error(err);
-      console.log('Invalid token');
       throw new AuthenticationError('Invalid token!');
     }
   },

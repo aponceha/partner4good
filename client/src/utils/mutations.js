@@ -1,5 +1,5 @@
 // from activity 21.20
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const ADD_THOUGHT = gql`
   mutation addThought($thoughtText: String!, $thoughtAuthor: String!) {

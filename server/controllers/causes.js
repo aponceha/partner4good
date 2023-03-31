@@ -14,7 +14,7 @@ const createCause = async (parent, args, context) => {
         });
         return newCause;
     } else {
-        throw new AuthenticationError('You are not authenticated');
+        throw console.error('You are not authenticated');
     }
 }
 

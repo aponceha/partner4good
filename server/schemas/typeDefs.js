@@ -43,6 +43,10 @@ const typeDefs = gql`
     createCause(causeInput: CauseInput!): Cause!
     editCause(causeInput: CauseInput): Cause!
     deleteCause(causeId: ID!): Cause
+
+    createCategory(name: String!): Category!
+    editCategory(categoryId: ID!, name: String!): Category!
+    deleteCategory(categoryId: ID!): Category
   }
 
   input CauseInput {

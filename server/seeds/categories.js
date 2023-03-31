@@ -13,7 +13,7 @@ const createCategories = async () => {
 }
 
 const removeAllCategories = async () => {
-    await CategoryModel.remove({});
+    await CategoryModel.deleteMany({});
 }
 
 module.exports = { createCategories, removeAllCategories };

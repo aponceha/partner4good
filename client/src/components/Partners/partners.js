@@ -98,6 +98,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -126,6 +127,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         >... See More
                         </motion.button>
                     </AnimatePresence>
@@ -154,6 +156,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         >... See More
                         </motion.button>
                     </AnimatePresence>
@@ -182,6 +185,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         >... See More
                         </motion.button>
                     </AnimatePresence>
@@ -210,6 +214,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         >... See More
                         </motion.button>
                     </AnimatePresence>
@@ -238,6 +243,7 @@ export default function Partners() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
+                        onClick={() => window.location.href = '/#/profile'}
                         >... See More
                         </motion.button>
                     </AnimatePresence>

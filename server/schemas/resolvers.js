@@ -1,6 +1,7 @@
 // from activity 21.28
 const { createUser, login } = require('../controllers/users');
 const { createCause, getAllCauses  } = require('../controllers/causes');
+const { createCategory } = require('../controllers/categories');
 
 const resolvers = {
   Query: {
@@ -16,6 +17,7 @@ const resolvers = {
   Mutation: {
     createUser: createUser,
     login: login,
+
     createCause: createCause, 
     editCause: async (parent, {
       name, description,
@@ -24,6 +26,10 @@ const resolvers = {
       categoryId,
       websiteLink }, context) => {},
     deleteCause: async (parent, { causeId }, context) => {},
+    
+    createCategory: async (parent, { name }, context) => {},
+    editCategory: async (parent, { categoryId, name }, context) => {},
+    deleteCategory: async (parent, { categoryId }, context) => {},
   },
 };
 

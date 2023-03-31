@@ -8,30 +8,30 @@ const causeSchema = mongoose.Schema({
     },
     description: {
         type: String,
-        required: [true, "Description is required"]
+        required: [false, "Description is required"]
     },
     // picture: TBD,
     contactName: {
         type: String,
-        required: [true, "Contact name is required"]
+        required: [false, "Contact name is required"]
     },
     contactEmail: {
         type: String,
-        required: [true, "Contact email is required"]
+        required: [false, "Contact email is required"]
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
-        required: [true, "Category is required"]
+        required: [false, "Category is required"]
     },
     headquarters: {
         type:String,
-        required: [true, "Address is required"]
+        required: [false, "Address is required"]
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: false
     },
     websiteLink: {
         type: String,

@@ -8,39 +8,40 @@ const causeSchema = mongoose.Schema({
     },
     description: {
         type: String,
-        required: [false, "Description is required"]
+        required: [true, "Description is required"]
     },
     // picture: TBD,
     contactName: {
         type: String,
-        required: [false, "Contact name is required"]
+        required: [true, "Contact name is required"]
     },
     contactEmail: {
         type: String,
-        required: [false, "Contact email is required"]
+        required: [true, "Contact email is required"]
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Category",
-        required: [false, "Category is required"]
+        ref: "category",
+        // required: [true, "Category is required"]
     },
     headquarters: {
-        type:String,
-        required: [false, "Address is required"]
+        type: String,
+        required: [true, "Address is required"]
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: false
-    },
+    users: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "user",
+            // required: true
+        }
+    ],
     websiteLink: {
         type: String,
         required: false
-    
     }
-    
+
 });
 
-const CauseModel = mongoose.model("cause", causeSchema);
+const Cause = mongoose.model("cause", causeSchema);
 
-module.exports = CauseModel;
+module.exports = Cause;

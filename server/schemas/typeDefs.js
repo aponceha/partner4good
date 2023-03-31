@@ -1,4 +1,3 @@
-// // from activity 21.28
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -32,21 +31,22 @@ const typeDefs = gql`
 
   type Query {
     user: User!
+    users: [User]
+    me: User
+    cause: Cause!
     causes: [Cause]
+    causesCat: [Cause]
+    category: Category!
     categories: [Category]
   }
 
   type Mutation {
-    createUser(email: String!, password: String!): Auth
+    addUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
     createCause(causeInput: CauseInput!): Cause!
     editCause(causeInput: CauseInput): Cause!
     deleteCause(causeId: ID!): Cause
-
-    createCategory(name: String!): Category!
-    editCategory(categoryId: ID!, name: String!): Category!
-    deleteCategory(categoryId: ID!): Category
   }
 
   input CauseInput {

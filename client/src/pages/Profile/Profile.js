@@ -1,24 +1,13 @@
 import React from 'react';
-import './about.css';
-import { motion, stagger, AnimatePresence } from 'framer-motion';
-import hero  from '../../assets/hero.png';
-import p4g from '../../assets/p4g.png';
-import c1 from '../../assets/c1.png';
-import c2 from '../../assets/c2.png';
-import c3 from '../../assets/c3.png';
+import {motion, AnimatePresence} from 'framer-motion';
 import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
+import './Profile.css';
 
-const styles = {
-    background: {
-        overflow: 'scroll'
-    }
-}
 
-export default function About(props) {
 
-    props.setPage("home");
+export default function AddCause() {
 
     const containerVariants = {
         hidden: {
@@ -57,11 +46,44 @@ export default function About(props) {
       };
 
     return (
-        <div className="bodyDiv">
-            <div className =  "imgDiv">
-                <img className = "i1" src={hero} alt="placeholder" />
-                <h3 className = "h1FYP">Find your partner.</h3>
+        <div className="aboutContainer">
+            <div className = "mainContainer">
+                <button className = "editButton rightFloat"
+                onClick={() => window.location.href = '/#/addcause'}
+                > Edit Profile </button>
+                <div className = "mainGrid">
+                    <div className = "imgDivTainer">
+                    <img className = "imgPartner" src ={charity6} alt= "placeholder"/>
+                    </div>
+                    <div className = "dataList">
+                        <h2 className = "h2Name">Help for Homeless</h2>
+                        <li>Founded:</li>
+                        <li>Headquarters:</li>
+                        <li>Contact:</li>
+                        <li>Email:</li>
+                        <li>Website:</li>
+                        <li>Category:</li>
+                    </div>
+                </div>
+                <p className = "descriptionDiv">
+                    Covenant House is the largest agency in Canada 
+                    serving youth who are homeless, trafficked or at risk.
+                     Covenant House is inclusive, intentional and impactful.
+                      As a leader in the sector, we advocate so that all 
+                      youth can have lives free from homelessness and 
+                      trafficking. Our donors allow us to meet the emerging
+                       needs of our youth and accelerate our work. 
+                       Our comprehensive youth-driven programming is centred 
+                       on unconditional love, absolute respect and relentless 
+                       engagement.
+                    </p>
+
+                <p className = "comingSoon"> Coming Soon.. </p>
+                <button className = "donateButton"> Donate Now </button>
             </div>
+
+            <h3 className = "h1FYPp">Check out more Causes</h3>
+
             <div className = "fypDiv">
             <AnimatePresence>
             <motion.div className = "fypGrid"
@@ -71,22 +93,22 @@ export default function About(props) {
             exit="exit"
             >
                 
-                <motion.div class="pBorder1"
+                <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity3} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity3} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -101,22 +123,22 @@ export default function About(props) {
             
             </motion.div>
 
-            <motion.div class="pBorder1"
+            <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity4} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity4} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -131,22 +153,22 @@ export default function About(props) {
             
             </motion.div>
 
-            <motion.div class="pBorder1"
+            <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity6} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity6} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -161,19 +183,10 @@ export default function About(props) {
             
             </motion.div>
 
-            <button class="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
+            <button className="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
             
             </motion.div>
             </AnimatePresence>
-            </div>
-            <div className = "wwaDiv">
-                <img id = "whoweare" className = "i1 wwaImg" src={p4g} alt="placeholder" />
-                <h2 className = "h1WWA">Who We Are</h2>
-                <p className="pWWA">
-                Partner for Good is committed to helping good 
-                corporate citizens find & partner with causes, 
-                in the hopes of fostering a better, more sustainable world. 
-                </p>
             </div>
         </div>
     )

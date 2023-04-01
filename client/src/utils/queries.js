@@ -1,6 +1,32 @@
 // from activity 21.20
 import { gql } from '@apollo/client';
 
+export const QUERY_USER = gql`
+  query user {
+    user {
+     _id
+      email
+    }
+  }
+`;
+
+
+// myCause: Cause
+// cause(causeId: ID!): Cause!
+// causes: [Cause]
+// causesCat(categoryId: ID!): [Cause]
+// categories: [Category]
+
+
+
+
+
+
+
+
+
+
+
 export const QUERY_THOUGHTS = gql`
   query getThoughts {
     thoughts {

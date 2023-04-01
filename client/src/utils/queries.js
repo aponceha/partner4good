@@ -17,39 +17,89 @@ export const QUERY_USER = gql`
 // causesCat(categoryId: ID!): [Cause]
 // categories: [Category]
 
-
-
-
-
-
-
-
-
-
-
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_USERS = gql`
+  query users {
+    users {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-    }
-  }
-`;
-
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
+      email
+      password
+      causes {
         _id
-        commentText
-        createdAt
+        name
+        description
+        headquarters
+        contactName
+        contactEmail
+        websiteLink
+        category {
+          _id
+          name
+        }
       }
     }
   }
 `;
+export const QUERY_CAUSES = gql`
+  query causes {
+    causes {
+      _id
+      name
+      description
+      headquarters
+      contactName
+      contactEmail
+      websiteLink
+      category {
+        _id
+        name
+      }
+    }
+  }
+`;
+export const QUERY_CATEGORIES = gql`
+  query categories {
+    categories {
+      _id
+      name
+    }
+  }
+`;
+export const QUERY_SINGLE_CAUSE = gql`
+  query cause($causeId: ID!) {
+    cause(causeId: $causeId) {
+      _id
+      name
+      description
+      headquarters
+      contactName
+      contactEmail
+      websiteLink
+      category {
+        _id
+        name
+      }
+    }
+  }
+`;
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      email
+      password
+      causes {
+        _id
+        name
+        description
+        headquarters
+        contactName
+        contactEmail
+        websiteLink
+        category {
+          _id
+          name
+        }
+      }
+    }
+  }
+`; 

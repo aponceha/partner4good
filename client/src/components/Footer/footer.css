@@ -7,7 +7,7 @@
 }
 
 .footerDiv {
-    background-color: var(--bg-dk-green);
+    background-color: var(--bg-lt-blue);
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -1,14 +1,14 @@
-const { UserModel, CategoryModel, CauseModel } = require('../models');
+const { User, Category, CauseModel } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const createUser = async (parent, args) => {
-    const user = await UserModel.create(args);
+    const user = await User.create(args);
     const token = signToken(user);
     return { token, user };
 }
 
 const login = async (parent, { email, password }) => {
-    const user = await UserModel.findOne({ email });
+    const user = await User.findOne({ email });
 
     if (!user) {
       throw new AuthenticationError('No user found');

@@ -31,12 +31,10 @@ const typeDefs = gql`
 
   type Query {
     user: User!
-    users: [User]
-    me: User
-    cause: Cause!
+    myCause: Cause
+    cause(causeId: ID!): Cause!
     causes: [Cause]
-    causesCat: [Cause]
-    category: Category!
+    causesCat(categoryId: ID!): [Cause]
     categories: [Category]
   }
 
@@ -45,7 +43,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
 
     createCause(causeInput: CauseInput!): Cause!
-    editCause(causeInput: CauseInput): Cause!
+    editCause(causeInput: CauseInput!): Cause!
     deleteCause(causeId: ID!): Cause
   }
 
@@ -56,7 +54,8 @@ const typeDefs = gql`
     contactName: String!
     contactEmail: String!
     categoryId: ID!
-    websiteLink: String
+    websiteLink: String!
+    causeId: String
   }
 `;
 

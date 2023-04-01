@@ -28,13 +28,11 @@ const causeSchema = mongoose.Schema({
         type: String,
         required: [true, "Address is required"]
     },
-    users: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "user",
-            // required: true
-        }
-    ],
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user",
+        required: true
+    },
     websiteLink: {
         type: String,
         required: false

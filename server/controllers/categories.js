@@ -1,8 +1,8 @@
-const { CategoryModel } = require("../models");
+const { Category } = require("../models");
 
 const createCategory = async (parent, args, context) => {
 //   if (context.user) {
-    const newCategory = await CategoryModel.create({
+    const newCategory = await Category.create({
       name: args.name,
     });
     return newCategory;
@@ -12,7 +12,7 @@ const createCategory = async (parent, args, context) => {
 };
 
 const getAllCategories = async () => {
-    const categories = await CategoryModel.find({}).exec();
+    const categories = await Category.find({}).exec();
     return categories;
     };
 

@@ -1,4 +1,4 @@
-const { CategoryModel } = require('../models');
+const { Category } = require('../models');
 
 
 const createCategories = async () => { 
@@ -9,11 +9,11 @@ const createCategories = async () => {
         { name: 'Homelessness'},
         { name: 'Food Security'},
     ];
-    await CategoryModel.insertMany(categories);
+    await Category.insertMany(categories);
 }
 
 const removeAllCategories = async () => {
-    await CategoryModel.deleteMany({});
+    await Category.deleteMany({});
 }
 
 module.exports = { createCategories, removeAllCategories };

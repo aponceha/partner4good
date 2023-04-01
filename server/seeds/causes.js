@@ -1,4 +1,4 @@
-const { Cause } = require('../models');
+const { Cause, User, Category } = require('../models');
 
 const createCauses = async () => { 
     const causes = [
@@ -7,9 +7,9 @@ const createCauses = async () => {
             description: 'At Plant With Purpose, we restore hope by reversing two of the worlds greatest challenges: global poverty and environmental damage. These problems are interconnected. Our goal is to see creations life-giving regenerative cycles restored and people renewed through their relationship to God, living in healthy sufficiency and empowered to dream.',
             contactName: 'Pam',
             contactEmail: 'pam@test.com',
-            // category: 1,
+            category: 'Environment',
             headquarters: 'Yellowknife',
-            // user: '',
+            user: 'pam@test.com',
             websiteLink: 'https://plantwithpurpose.org/?gclid=CjwKCAjw5pShBhB_EiwAvmnNVz5TTJOfdw4GXryDe9IUNlGngdeVfVvmw72tZyYV0qKyJuTgz1EUnhoCseAQAvD_BwE'
         },
         { 
@@ -17,9 +17,9 @@ const createCauses = async () => {
             description: 'The Inclusion Project (TIP) aims to advance equity, diversity, and inclusion in Canadian society by actively engaging partners and decisionmakers, through research, knowledge development and community. Our Accessibility, Racial Equity, Diversity, and Inclusion (AREDI+) process takes an intersectional and iterative approach to addressing complex issues of race-based, gendered and other forms of discrimination. Our Anti-Racism Anti-Harassment (ARAH) framework covers specific action to eliminate behaviors and policies that may prevent racialized Canadians and newcomers to Canada from accessing equitable opportunities based on racial, gendered and (dis)ability-based discrimination.',
             contactName: 'Timmy',
             contactEmail: 'tim@test.com',
-            // category: 2,
+            category: 'Environment',
             headquarters: 'Toronto',
-            // user: '',
+            user: 'tim@test.com',
             websiteLink: 'https://www.theinclusionproject.com/'
         },
         { 
@@ -27,9 +27,9 @@ const createCauses = async () => {
             description: 'Egale is Canadas leading organization for 2SLGBTQI people and issues. We improve and save lives through research, education, awareness, and by advocating for human rights and equality in Canada and around the world. Our work helps create societies and systems that reflect the universal truth that all persons are equal and none is other.',
             contactName: 'Elliot',
             contactEmail: 'elliot@test.com',
-            // category: 3,
+            category: 'Environment',
             headquarters: 'Montreal',
-            // user: '',
+            user: 'elliot@test.com',
             websiteLink: 'https://egale.ca/'
         },
         { 
@@ -37,9 +37,9 @@ const createCauses = async () => {
             description: 'The Canadian Alliance to End Homelessness leads a national movement of individuals, organizations and communities working together to end homelessness in Canada.',
             contactName: 'Cameron',
             contactEmail: 'cameron@test.com',
-            // category: 4,
+            category: 'Environment',
             headquarters: 'Vancouver',
-            // user: '',
+            user: 'cameron@test.com',
             websiteLink: 'https://caeh.ca/'
         },
         { 
@@ -47,13 +47,22 @@ const createCauses = async () => {
             description: 'Food Secure Canada is a pan-Canadian alliance of organizations and individuals working together to advance food security and food sovereignty through three interlocking goals: zero hunger, healthy and safe food, and sustainable food systems.',
             contactName: 'Frankie',
             contactEmail: 'frankie@test.com',
-            // category: 5,
+            category: 'Environment',
             headquarters: 'Saskatoon',
-            // user: '',
+            user: 'frankie@test.com',
             websiteLink: 'https://foodsecurecanada.org/'
         }
     ];
-    await Cause.insertMany(causes);
+
+    for(let cause of causes) {
+        const user = await User.findOne({email: cause.user });
+        const category = await Category.findOne({name: cause.category });
+
+        cause.user = user._id;
+        cause.category = category._id;
+
+        await Cause.create(cause);
+    }
 }
 
 const removeAllCauses = async () => {

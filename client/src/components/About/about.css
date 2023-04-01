@@ -1,0 +1,304 @@
+
+:root {
+    --bg-dk-green: #0D504C;
+    --bg-lt-green: #237A74;
+    --bg-txt-green: #477C88;
+    --bg-lt-blue: #86B0BD;
+}
+
+.bodyDiv {
+    position: relative;
+    height: fit-content;
+}
+
+.imgDiv {
+    z-index: -1;
+    width: 100%;
+    position: relative;
+}
+
+.i1 { 
+    width: 100%;
+}
+
+.headerHero {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: white;
+}
+
+.h1FYP {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    bottom: 0;
+    margin: 0;
+    color: white;
+}
+
+
+.btnSM {
+    height: 40px;
+    width: fit-content;
+    font-size: 0.8rem;
+}
+
+.btnSMC {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: fit-content;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    background-color: var(--bg-lt-green);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border: none;
+
+}
+.btnSMC:hover {
+    scale: 1.02;
+    color:rgb(240, 237, 237);
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+
+.fypGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:420px;
+    background-color: var(--bg-dk-green);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 3rem 1.5rem;
+
+}
+
+.fypDiv {
+   position: relative;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-lt-green);
+    border-radius: 15px;
+}
+
+.wwaDiv {
+    z-index: -1;
+    width: 100%;
+    position: relative;
+    
+}
+
+.h1WWA {
+    position: absolute;
+    width: fit-content;
+    color: var(--bg-dk-green);
+    top: 15px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.pWWA {
+    position: absolute;
+    display: flex;
+    right: 10%;
+    bottom: 10%;
+    background-color: var(--bg-txt-green);
+    padding: 1rem;
+    width: 32%;
+    height: fit-content;
+    margin: 0;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.4vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wwaImg {
+    height: auto;
+    width: 100%;
+
+    
+}
+
+.pBorder1 {
+    padding: 0rem;
+}
+
+.partnerCard {}
+
+.imgCard1 {
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.descriptionBox1 {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35%;
+    background-color: var(--bg-lt-blue);
+    z-index: 2;
+    border-radius: 0px 0 10px 10px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 5px 10px 2px 10px;
+    overflow: hidden;
+
+}
+
+.partnerP {
+    margin: 0;
+}
+
+.seemore1 {
+    background-color: var(--bg-lt-green);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border: none;
+}
+
+.seemore1:hover {
+    scale: 1.1;
+    color:rgb(240, 237, 237);
+    letter-spacing: 0.05em;
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+
+.partnerCard1 {
+    background: rgb(211, 209, 209);
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 65%;
+    position: relative;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .partnerCard1 {
+        height: 45%;
+    }
+    .descriptionBox1 {
+        height:55%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .imgDiv {
+        height: auto;
+    }
+
+    .fypGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 1rem 4%;
+        height: 1000px;
+        row-gap: 1rem;
+        
+    }
+
+    .partnerCard1 {
+        height: 65%;
+    }   
+
+    .descriptionBox1 {
+        height: 35%;
+    }
+
+    .fypGrid:last-child {
+        padding-bottom: 1.7rem;
+    }
+
+    .cards {
+        width: 100%;
+        height: 250px;
+    }
+    .pWWA {
+        height: 35%;
+        width: 40%;
+        font-size: 0.75rem;
+    }
+    .h1WWA {
+    }
+    .wwaImg {
+        height: 100%;
+        width: 100%;
+    }
+    .pBorder1 {
+        padding: 0rem;
+    }
+
+    .seemore1 {
+        font-size: 0.5rem;
+    }
+    .h1FYP {
+        font-size: 1rem;
+    }
+    .btnSMC {
+        font-size: 0.5rem;
+    }
+    .btnSM {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .imgDiv {
+        height: 163px;
+    }
+    .fypGrid {
+        height: 1100px;
+    }
+
+    .partnerCard1 {
+        height: 50%;
+    }
+    .descriptionBox1 {
+        height:50%;
+    }
+    .fypGrid:last-child {
+        padding-bottom: 2.6rem;
+    }
+    .pWWA {
+        font-size: 0.4rem;
+    }
+}
+

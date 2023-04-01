@@ -1,0 +1,246 @@
+:root {
+    --bg-dk-green: #0D504C;
+    --bg-lt-green: #237A74;
+    --bg-txt-green: #477C88;
+    --bg-lt-blue: #86B0BD;
+}
+
+.partnerContainer {
+    background: #0D504C;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    padding: 2%;
+    height: fit-content;
+    overflow-y:hidden;
+}
+.filterDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    margin-right: 20%;
+    margin-bottom: 10px;
+    
+}
+.filter {
+    background-color: var(--bg-lt-green);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 20px;
+    
+    
+}
+
+.bodyContainer {
+    background-color: var(--bg-dk-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding-top: 55px; 
+}
+
+.partnerCard {
+    background: rgb(211, 209, 209);
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 65%;
+    position: relative;
+    width: 100%;
+}
+
+.imgCard {
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+}
+.pBorder {
+    border: 2px;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+
+.partnerP {
+    
+}
+.p1 {
+    background-image: url(../../assets/charity1.png);
+}
+.p2 {
+    background-image: url(../../assets/charity2.png);
+}
+.p3 {
+    background-image: url(../../assets/charity3.png);
+}
+.p4 {
+    background-image: url(../../assets/charity4.png);
+}
+.p5 {
+    background-image: url(../../assets/charity5.png);
+}
+.p6 {
+    background-image: url(../../assets/charity6.png);
+}
+
+.descriptionBox {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35%;
+    background-color: var(--bg-lt-blue);
+    z-index: 2;
+    border-radius: 0px 0 10px 10px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 10px;
+    overflow-y: hidden;
+
+}
+
+.seemore {
+    background-color: var(--bg-lt-green);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border: none;
+
+}
+
+.seemore:hover {
+    scale: 1.1;
+    color:rgb(240, 237, 237);
+    letter-spacing: 0.05em;
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+
+.filter {
+    border: none;
+    font: inherit;
+    outline: inherit;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: fit-content;
+    letter-spacing: 0.03em;
+
+
+}
+
+.filter:hover {
+    scale: 1.1;
+    color:rgb(240, 237, 237);
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+
+@media screen and (max-width: 1280px) {
+    .partnerCard {
+        height: 62%;
+    }
+    .descriptionBox {
+        height:38%;
+    }
+    .partnerContainer {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .partnerContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .bodyContainer {
+        padding-top: 117px;
+    }
+
+    .partnerCard {
+        height: 55%;
+    }   
+
+    .descriptionBox {
+        height: 45%;
+    }
+
+    .fypGrid:last-child {
+        padding-bottom: 1.7rem;
+    }
+
+    .cards {
+        width: 100%;
+        height: 250px;
+    }
+    .pWWA {
+        height: 35%;
+        width: 40%;
+        font-size: 0.75rem;
+    }
+    .h1WWA {
+    }
+    .wwaImg {
+        height: 100%;
+        width: 100%;
+    }
+    .pBorder1 {
+        padding: 0rem;
+    }
+
+    .seemore1 {
+        font-size: 0.5rem;
+    }
+    .h1FYP {
+        font-size: 1rem;
+    }
+    .btnSMC {
+        font-size: 0.5rem;
+    }
+    .btnSM {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+
+    .partnerCard1 {
+        height: 50%;
+    }
+    .descriptionBox1 {
+        height:50%;
+    }
+    .fypGrid:last-child {
+        padding-bottom: 2.6rem;
+    }
+    
+}
+

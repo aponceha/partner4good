@@ -1,0 +1,78 @@
+
+:root {
+    --bg-dk-green: #0D504C;
+    --bg-lt-green: #237A74;
+    --bg-txt-green: #477C88;
+    --bg-lt-blue: #86B0BD;
+}
+
+.navBar {
+    color: black;
+}
+
+.nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+
+.navDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navH1 {
+    margin: 0.3rem 1.2rem;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+
+
+.background {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    
+}
+
+.links {
+    color: white;
+    padding: 0 1rem;
+    text-decoration: none; 
+}
+
+.links:hover {
+    cursor: pointer;
+    scale: 1.1;
+    color:rgb(218, 214, 214);
+}
+@media screen and (max-width: 768px) {
+    .navH1 {
+        top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navDiv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        padding: 0;
+        height: 120px;
+    }
+    .navLinks {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-right: 0;
+    }
+}

@@ -21,26 +21,25 @@ const causeSchema = mongoose.Schema({
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Category",
-        required: [true, "Category is required"]
+        ref: "category",
+        // required: [true, "Category is required"]
     },
     headquarters: {
-        type:String,
+        type: String,
         required: [true, "Address is required"]
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
         required: true
     },
     websiteLink: {
         type: String,
         required: false
-    
     }
-    
+
 });
 
-const CauseModel = mongoose.model("cause", causeSchema);
+const Cause = mongoose.model("cause", causeSchema);
 
-module.exports = CauseModel;
+module.exports = Cause;

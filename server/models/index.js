@@ -1,5 +1,5 @@
-const UserModel = require('./User');
-const CategoryModel = require('./Category');
-const CauseModel = require('./Cause');
+const User = require('./User');
+const Category = require('./Category');
+const Cause = require('./Cause');
 
-module.exports = { UserModel, CategoryModel, CauseModel };
+module.exports = { User, Category, Cause };

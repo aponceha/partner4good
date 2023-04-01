@@ -1,9 +1,9 @@
 import React from 'react';
-import './profile.css';
-import {motion, stagger, AnimatePresence} from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
+import './Profile.css';
 
 
 
@@ -46,7 +46,7 @@ export default function AddCause() {
       };
 
     return (
-        <div class="aboutContainer">
+        <div className="aboutContainer">
             <div className = "mainContainer">
                 <button className = "editButton rightFloat"
                 onClick={() => window.location.href = '/#/addcause'}
@@ -93,22 +93,22 @@ export default function AddCause() {
             exit="exit"
             >
                 
-                <motion.div class="pBorder1"
+                <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity3} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity3} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -123,22 +123,22 @@ export default function AddCause() {
             
             </motion.div>
 
-            <motion.div class="pBorder1"
+            <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity4} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity4} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -153,22 +153,22 @@ export default function AddCause() {
             
             </motion.div>
 
-            <motion.div class="pBorder1"
+            <motion.div className="pBorder1"
                     variants={cardVariants}
                     whileHover = {{ y: -10 } }
                     >
-                <div class="partnerCard1">
-                    <img class="imgCard1" src={charity6} alt="img" />
+                <div className="partnerCard1">
+                    <img className="imgCard1" src={charity6} alt="img" />
                 </div>
-                <div class="descriptionBox1">
-                    <p class="partnerP">
+                <div className="descriptionBox1">
+                    <p className="partnerP">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt 
                     ut labore et dolore magna aliqua. Ut enim ad minim 
         
                     </p>
                     <AnimatePresence>
-                        <motion.button class="seemore1"
+                        <motion.button className="seemore1"
                         initial= {{ opacity: 0 }}
                         animate= {{ opacity: 1 }}
                         whileHover={{ scale: 1.1 }}
@@ -183,7 +183,7 @@ export default function AddCause() {
             
             </motion.div>
 
-            <button class="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
+            <button className="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
             
             </motion.div>
             </AnimatePresence>

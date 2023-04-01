@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import './addCause.css';
-import {motion, stagger, AnimatePresence, filterProps} from 'framer-motion';
-import charity3 from '../../assets/charity3.png';
-import charity4 from '../../assets/charity4.png';
-import charity6 from '../../assets/charity6.png';
+import './AddCause.css';
+// import {motion, stagger, AnimatePresence, filterProps} from 'framer-motion';
+// import charity3 from '../../assets/charity3.png';
+// import charity4 from '../../assets/charity4.png';
+// import charity6 from '../../assets/charity6.png';
 import ph from '../../assets/placeholder.png';
 import { useState, useEffect } from 'react';
 
@@ -12,48 +13,46 @@ import { useState, useEffect } from 'react';
 export default function AddCause(props) {
     
     const [name, setName] = useState("");
-    const [selectedFile, setSelectedFile] = useState(null);
+    // const [selectedFile, setSelectedFile] = useState(null);
 
-    const containerVariants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: { 
-                type: "spring", 
-                when: 'beforeChildren', staggerChildren: 0.1,
-                staggerDirection: 1,
+    // const containerVariants = {
+    //     hidden: {
+    //         opacity: 0,
+    //     },
+    //     visible: {
+    //         opacity: 1,
+    //         transition: { 
+    //             type: "spring", 
+    //             when: 'beforeChildren', staggerChildren: 0.1,
+    //             staggerDirection: 1,
           
-            },
+    //         },
     
-        },
-        exit: {
-          scale: "-100vw",
-          transition: { ease: "easeInOut" },
-        },
-      };
+    //     },
+    //     exit: {
+    //       scale: "-100vw",
+    //       transition: { ease: "easeInOut" },
+    //     },
+    //   };
     
-      const cardVariants = {
-        hidden: {
-          scale: 0,
-          opacity: 0,
-        },
-        visible: {
-          scale: 1,
-          opacity: 1,
-          transition: { type: "spring", stiffness: 50 },
-        },
-        exit: {
-          x: "-100vw",
-          transition: { ease: "easeInOut" },
-        },
-      };
-
-      props.setPage("addCause")
+    //   const cardVariants = {
+    //     hidden: {
+    //       scale: 0,
+    //       opacity: 0,
+    //     },
+    //     visible: {
+    //       scale: 1,
+    //       opacity: 1,
+    //       transition: { type: "spring", stiffness: 50 },
+    //     },
+    //     exit: {
+    //       x: "-100vw",
+    //       transition: { ease: "easeInOut" },
+    //     },
+    //   };
 
     return (
-        <div class="aboutContainer">
+        <div className="aboutContainer">
             <div className = "mainContainer">
                 <button className = "editButton rightFloat"
                 onClick={() => window.location.href = '/#/profile'}

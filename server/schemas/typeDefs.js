@@ -4,7 +4,6 @@ const typeDefs = gql`
   type User {
     _id: ID!
     email: String!
-    causes: [Cause]
   }
 
   type Cause {

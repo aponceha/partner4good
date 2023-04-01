@@ -5,6 +5,7 @@ import About from './pages/About/About';
 // import Partners from './pages/Partners/Partners';
 // import AddCause from './pages/AddCause/AddCause';
 import Login from './pages/Login/Login';
+import SignUp from './pages/Signup/Signup';
 // import Profile from './pages/Profile/Profile';
 import Footer from './components/Footer/footer';
 import Nav from './components/Nav/nav';
@@ -21,6 +22,7 @@ export default function App() {
                         <Routes>
                             <Route path='/' element={<About />} />
                             <Route path='/login' element={<Login />} />
+                            <Route path='/signup' element={<SignUp />} />
                             {/* <Route path='/profile' element={<Profile />} />
                             <Route path='/partners' element={<Partners />} />
                             <Route path='/addcause' element={<AddCause />} />

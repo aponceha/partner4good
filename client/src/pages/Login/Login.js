@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { useMutation } from '@apollo/client';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import './Login.css';
@@ -48,7 +48,7 @@ export default function Login() {
 
                 <div className="form-group">
                     <button className="btn" type="submit" style={{ cursor: 'pointer' }}>Login</button>
-                    <a href="/signup" className="btn" style={{ cursor: 'pointer' }}>Create an account</a>
+                    <Link to="/signup" className="btn" style={{ cursor: 'pointer' }}>Create an Account</Link>
                 </div>
             </form>
             {loginError && <div className="alert alert-danger" role="alert">Login failed. Please check your email and password and try again.</div>}

@@ -65,7 +65,6 @@ export default function About() {
 
     return (
         <div className="bodyDiv">
-            {user.email}
             <div className =  "imgDiv">
                 <img className = "i1" src={hero} alt="placeholder" />
                 <h3 className = "h1FYP">Find your partner.</h3>

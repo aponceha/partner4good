@@ -1,6 +1,6 @@
 import React from 'react';
 import './nav.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 // import { motion, stagger, AnimatePresence } from 'framer-motion';
 // import { useEffect, useLocation } from 'react';
 import { Link } from 'react-scroll';
@@ -15,11 +15,15 @@ import { Link } from 'react-scroll';
 // };
 
 
-export default function Nav(props) {
+export default function Nav() {
+
+    const location = useLocation();
+
+    const isOnHome = location.pathname === '/';
 
 
     return (
-        <nav className="nav background" >
+        <nav className="nav background" style={{ position: isOnHome ? 'absolute' : '' }} >
             <div className="navDiv">
                 <h1 className="navH1">Partner for Good.</h1>
                 <div className="navLinks" >

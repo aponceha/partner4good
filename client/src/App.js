@@ -14,8 +14,8 @@ import './App.css';
 export default function App() {
 
     return (
-        <div className="App" >
-            <div className="">
+        <div className="App" id="page-container" >
+            <div id="content-wrap">
                 <Nav />
                 <AnimatePresence>
                         <Routes>
@@ -27,8 +27,8 @@ export default function App() {
                             <Route path='/contact' element={<Contact />} /> */}
                         </Routes>
                 </AnimatePresence>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }

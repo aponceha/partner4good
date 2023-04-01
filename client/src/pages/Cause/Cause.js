@@ -3,11 +3,11 @@ import {motion, AnimatePresence} from 'framer-motion';
 import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
-import './Profile.css';
+import './Causes.css';
 
 
 
-export default function AddCause() {
+export default function CausePage() {
 
     const containerVariants = {
         hidden: {
@@ -49,7 +49,7 @@ export default function AddCause() {
         <div className="aboutContainer">
             <div className = "mainContainer">
                 <button className = "editButton rightFloat"
-                onClick={() => window.location.href = '/#/addcause'}
+                onClick={() => window.location.href = '/addcause'}
                 > Edit Profile </button>
                 <div className = "mainGrid">
                     <div className = "imgDivTainer">
@@ -114,7 +114,7 @@ export default function AddCause() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -144,7 +144,7 @@ export default function AddCause() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -174,7 +174,7 @@ export default function AddCause() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -183,7 +183,7 @@ export default function AddCause() {
             
             </motion.div>
 
-            <button className="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
+            <button className="btnSMC" onClick={() => window.location.href = '/causes'}> See More Causes</button>
             
             </motion.div>
             </AnimatePresence>

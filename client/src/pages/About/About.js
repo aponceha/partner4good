@@ -99,7 +99,7 @@ export default function About() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -129,7 +129,7 @@ export default function About() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -159,7 +159,7 @@ export default function About() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 1.5 }}
-                        onClick={() => window.location.href = '/#/profile'}
+                        onClick={() => window.location.href = '/cause'}
                         > ... See More
                         </motion.button>
                     </AnimatePresence>
@@ -168,7 +168,7 @@ export default function About() {
             
             </motion.div>
 
-            <button className="btnSMC" onClick={() => window.location.href = '/#/partners'}> See More Causes</button>
+            <button className="btnSMC" onClick={() => window.location.href = '/causes'}> See More Causes</button>
             
             </motion.div>
             </AnimatePresence>

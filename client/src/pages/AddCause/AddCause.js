@@ -55,7 +55,7 @@ export default function AddCause(props) {
         <div className="aboutContainer">
             <div className = "mainContainer">
                 <button className = "editButton rightFloat"
-                onClick={() => window.location.href = '/#/profile'}
+                onClick={() => window.location.href = '/profile'}
                 > Save Profile </button>
                 <div className = "mainGrid1">
                 <div className = "imgDivTainer1">

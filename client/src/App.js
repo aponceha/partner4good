@@ -2,11 +2,11 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import About from './pages/About/About';
-// import Partners from './pages/Partners/Partners';
+import Causes from './pages/Causes/Causes';
 // import AddCause from './pages/AddCause/AddCause';
 import Login from './pages/Login/Login';
 import SignUp from './pages/Signup/Signup';
-// import Profile from './pages/Profile/Profile';
+// import Cause from './pages/Cause/Cause';
 import Footer from './components/Footer/footer';
 import Nav from './components/Nav/nav';
 import './App.css';
@@ -23,10 +23,10 @@ export default function App() {
                             <Route path='/' element={<About />} />
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<SignUp />} />
-                            {/* <Route path='/profile' element={<Profile />} />
-                            <Route path='/partners' element={<Partners />} />
-                            <Route path='/addcause' element={<AddCause />} />
-                            <Route path='/contact' element={<Contact />} /> */}
+                            <Route path='/causes' element={<Causes />} />
+                            {/* <Route path='/cause' element={<Cause />} /> */}
+                            {/* <Route path='/addcause' element={<AddCause />} /> */}
+                            {/* <Route path='/contact' element={<Contact />} /> */}
                         </Routes>
                 </AnimatePresence>
             </div>

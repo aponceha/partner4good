@@ -23,7 +23,9 @@ const createUsers = async () => {
             password: 'password'
         }
     ];
-    await User.insertMany(users);
+    for (const user of users) {
+        await User.create(user);
+    }
 }
 
 const removeAllUsers = async () => {

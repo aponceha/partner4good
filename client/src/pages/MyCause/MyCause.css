@@ -7,40 +7,6 @@
     --tbox: #2A666A;
 }
 
-.submitButton, .donateButton  {
-    border: none;
-    font: inherit;
-    outline: inherit;
-    font-weight: 500;
-    font-size: 1.3rem;
-    letter-spacing: 0.03em;
-    color: white;
-    background-color: var(--bg-lt-green);
-    border-radius: 10px;
-    padding: 10px 15px;
-    margin: 10px;
-    width: fit-content;
-}
-
-.submitButton:hover,
-.donateButton:hover {
-    scale: 1.1;
-    color:rgb(240, 237, 237);
-    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
-}
-
-.mainGrid1 {
-    display: flex;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    height: fit-content;
-    row-gap: 2rem;
-    column-gap: 2rem;
-    padding: 1rem;
-    position: relative;
-    margin: 1rem;
-}
-
 .aboutContainer {
     position: relative;
     height: fit-content;
@@ -49,7 +15,6 @@
     flex-direction: column;
     background-color: var(--bg-dk-green);
     color: white;
-    min-height: 100vh;
 }
 
 .mainContainer {
@@ -58,13 +23,89 @@
     position: relative;
 }
 
-.row1 {
+.editButton, .addButton, .donateButton  {
+    right: 50px;
+    border: none;
+    font: inherit;
+    outline: inherit;
+    font-weight: 500;
+    font-size: 1.3rem;
+    width: fit-content;
+    letter-spacing: 0.03em;
+    color: white;
+    background-color: var(--bg-lt-green);
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: fit-content;
+}
+
+.rightFloat {
+    position: absolute;
+    right: 3%;
+    top: 80px;
+    z-index: 1;
+
+}
+
+.editButton:hover {
+    scale: 1.1;
+    color:rgb(240, 237, 237);
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+.donateButton:hover {
+    scale: 1.1;
+    color:rgb(240, 237, 237);
+    box-shadow:rgb(211, 209, 209) 0px 0px 10px 0px;
+}
+
+.mainGrid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    height: 350px;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.container {
+    position: relative;
+  }
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.container:hover img {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.imgUpload {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.imgPartner {
+    /* display: flex;
+    justify-content: flex-start;
+    align-items:flex-start; */
+    /* aspect-ratio: 16/9; */
+    /* max-width: 100%; */
+    /* width: auto; */
+    height: 300px;
+    scale: 0.8; 
 }
 
 .dataList {
@@ -85,25 +126,17 @@
     font-size: 2.6rem;
 }
 
-.formTitle {
-    font-size: 1.5rem;
-    justify-content: flex-start;
-    align-items: left;
-    color: white;
-}
-
-.label {
-    color: white;
-}
-
 .descriptionDiv {
-    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
     background-color: var(--tbox);
     border-radius: 15px;
     padding: 1rem;
     color: white;
-    font-size: 1rem;
-    border: 0;
+    font-size: 1.4vw;
 }
 
 .h1FYPp {

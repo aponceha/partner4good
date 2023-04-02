@@ -3,7 +3,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
-import './Causes.css';
+import './Cause.css';
 
 
 
@@ -48,9 +48,9 @@ export default function CausePage() {
     return (
         <div className="aboutContainer">
             <div className = "mainContainer">
-                <button className = "editButton rightFloat"
+                {/* <button className = "editButton rightFloat"
                 onClick={() => window.location.href = '/addcause'}
-                > Edit Profile </button>
+                > Edit Profile </button> */}
                 <div className = "mainGrid">
                     <div className = "imgDivTainer">
                     <img className = "imgPartner" src ={charity6} alt= "placeholder"/>

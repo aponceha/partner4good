@@ -1,4 +1,3 @@
-// from activity 21.20
 import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
@@ -25,17 +24,6 @@ mutation addUser($email: String!, $password: String!) {
 }
 `;
 
-// export const CREATE_CAUSE = gql`
-// mutation createCause($causeInput: CauseInput!) {
-//   createCause(causeInput: $CauseInput) {
-//     token
-//     user {
-//       _id
-//       email
-//     }
-//   }
-// }
-// `;
 export const CREATE_CAUSE = gql`
   mutation createCause(
     $name: String!
@@ -126,27 +114,28 @@ export const DELETE_CAUSE = gql`
     }
   }
 `;
-export const ADD_CATEGORY = gql`
-  mutation createCategory($name: String!) {
-    createCategory(categoryInput: { name: $name }) {
-      _id
-      name
-    }
-  }
-`;
-export const EDIT_CATEGORY = gql`
-  mutation editCategory($categoryId: ID!, $name: String!) {
-    editCategory(categoryInput: { categoryId: $categoryId, name: $name }) {
-      _id
-      name
-    }
-  }
-`;
-export const DELETE_CATEGORY = gql`
-  mutation deleteCategory($categoryId: ID!) {
-    deleteCategory(categoryId: $categoryId) {
-      _id
-      name
-    }
-  }
-`; 
+
+// export const ADD_CATEGORY = gql`
+//   mutation createCategory($name: String!) {
+//     createCategory(categoryInput: { name: $name }) {
+//       _id
+//       name
+//     }
+//   }
+// `;
+// export const EDIT_CATEGORY = gql`
+//   mutation editCategory($categoryId: ID!, $name: String!) {
+//     editCategory(categoryInput: { categoryId: $categoryId, name: $name }) {
+//       _id
+//       name
+//     }
+//   }
+// `;
+// export const DELETE_CATEGORY = gql`
+//   mutation deleteCategory($categoryId: ID!) {
+//     deleteCategory(categoryId: $categoryId) {
+//       _id
+//       name
+//     }
+//   }
+// `; 

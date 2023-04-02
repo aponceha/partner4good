@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Causes.css';
 import { motion, AnimatePresence } from 'framer-motion';
-import charity1 from '../../assets/charity1.png';
+// import charity1 from '../../assets/charity1.png';
 // import charity2 from '../../assets/charity2.png';
 // import charity3 from '../../assets/charity3.png';
 // import charity4 from '../../assets/charity4.png';

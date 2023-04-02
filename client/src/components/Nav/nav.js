@@ -10,7 +10,7 @@ const LoggedInNav = () => (
         <NavLink to='/causes' className="links" >Partners</NavLink>
         <NavLink to='/my-cause' className="links">My Cause</NavLink>
         <button className='btn btn-light' onClick={() => Auth.logout()}>Logout</button>
-        <h3>{Auth.getProfile().email}</h3>
+        {/* <h3>{Auth.getProfile().email}</h3> */}
     </>
 );
 

@@ -15,6 +15,8 @@ import CauseCard from '../../components/CauseCard/CauseCard';
 
 export default function Causes() {
     const [causes, setCauses] = useState([]);
+
+    const [filter, setFilter] = useState(false);
     
 
     const containerVariants = {
@@ -61,17 +63,51 @@ export default function Causes() {
             exit="exit"
         >
 
-            <div className="filterDiv">
-                <AnimatePresence>
-                    <motion.button className="filter"
-                        initial={{ x: 400 }}
-                        animate={{ x: 0 }}
-                        exit={{ x: 400 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 0.7 }}
-                    >  &nbsp; Filter &nbsp; <FontAwesomeIcon icon={faCaretDown} />&nbsp;</motion.button>
-                </AnimatePresence>
+<div className = "filterDiv">
+        <AnimatePresence>
+        <motion.button className="filter"
+        initial={{  x: 400 }}
+        animate={{ x: 0 }}
+        exit={{  x: 400 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => {setFilter(!filter)}}
+        transition={{ duration: 0.5, type: "spring", stiffness: 140, delay: 2 }}
+        >  &nbsp; Filter &nbsp; <FontAwesomeIcon icon={faCaretDown} />&nbsp;</motion.button>
+        
+        
+
+        </AnimatePresence>
+        </div>
+        <div className = "filterDiv2">
+        <AnimatePresence>
+        {filter && <motion.div className = "dropDown"
+        initial={{  y: -400, opacity: 0 }}
+        animate={{ y: 0, opacity: 1}}
+        exit={{  y: -400,  opacity: 0 }}
+        transition={{ duration: 0.1, type: "spring", stiffness: 120 }}
+        
+        >
+            <div className = "listRow">
+                <input className= "checkBox" type = "checkbox">
+                </input><span className = "filCat">Environment</span>
             </div>
+            <div className = "listRow">
+            <input className= "checkBox" type = "checkbox"></input><span className = "filCat">Diversity, Equity, Inclusion</span>
+            </div>
+            <div className = "listRow">
+            <input className= "checkBox" type = "checkbox"></input><span className = "filCat">LGBTQ</span>
+            </div>
+            <div className = "listRow">
+                <input className= "checkBox" type = "checkbox"></input>
+                <span className = "filCat">Homelessness</span>
+            </div>
+            <div className = "listRow">
+                <input className= "checkBox" type = "checkbox"></input>
+                <span className = "filCat">Food Security</span>
+            </div>
+        </motion.div>}
+        </AnimatePresence>
+        </div>
 
             <AnimatePresence>
                 <motion.div className="partnerContainer"

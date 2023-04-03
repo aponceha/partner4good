@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import './Login.css';
+import UserContext from '../../providers/userContext';
 
 const styles = {
   background: {

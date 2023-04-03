@@ -1,17 +1,15 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useMutation } from '@apollo/client';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { CREATE_CAUSE } from '../../utils/mutations';
-// import {motion, stagger, AnimatePresence, filterProps} from 'framer-motion';
-// import charity3 from '../../assets/charity3.png';
-// import charity4 from '../../assets/charity4.png';
-// import charity6 from '../../assets/charity6.png';
 import Auth from '../../utils/auth';
-import ph from '../../assets/placeholder.png';
 import './AddCause.css';
 
+// import UserContext from '../../providers/userContext';
+
 export default function AddCause() {
+    const [createCause, { err, data }] = useMutation(CREATE_CAUSE);
     const navigate = useNavigate();
     const [form, setForm] = useState({
         name: '',
@@ -22,9 +20,6 @@ export default function AddCause() {
         websiteLink: '',
         category: ''
     });
-    // idk how to include categoryId in here ^
-
-    const [createUser, { err, data }] = useMutation(CREATE_CAUSE);
     const [createError, setCreateError] = useState(false);
     const updateForm = (e) => {
         const { name, value } = e.target
@@ -33,60 +28,31 @@ export default function AddCause() {
             [name]: value,
         });
     };
-
     // This function will handle the submission.
     const createCauseFormHandler = async (e) => {
         e.preventDefault();
         console.log(form)
 
         try {
-            const { data } = await createUser({
-                variables: { ...form }
+            const { data } = await createCause({
+                variables: { name: form.name, description: form.description, headquarters: form.headquarters, contactName: form.contactName, contactEmail: form.contactEmail, websiteLink: form.websiteLink, category: form.category }
             });
-
-            Auth.login(data.createCause.token);
+            console.log(createCause)
+            console.log("im trying!")
+            // Auth.login(data.createCause.token);
             navigate("/my-cause");
         }
         catch (err) {
+            console.log("i failed :(")
             setCreateError(true)
         };
     }
 
-    // const containerVariants = {
-    //     hidden: {
-    //         opacity: 0,
-    //     },
-    //     visible: {
-    //         opacity: 1,
-    //         transition: { 
-    //             type: "spring", 
-    //             when: 'beforeChildren', staggerChildren: 0.1,
-    //             staggerDirection: 1,
-
-    //         },
-
-    //     },
-    //     exit: {
-    //       scale: "-100vw",
-    //       transition: { ease: "easeInOut" },
-    //     },
-    //   };
-
-    //   const cardVariants = {
-    //     hidden: {
-    //       scale: 0,
-    //       opacity: 0,
-    //     },
-    //     visible: {
-    //       scale: 1,
-    //       opacity: 1,
-    //       transition: { type: "spring", stiffness: 50 },
-    //     },
-    //     exit: {
-    //       x: "-100vw",
-    //       transition: { ease: "easeInOut" },
-    //     },
-    //   };
+           // const { loading, data } = useMutation(CREATE_CAUSE);
+    // const cause = data?.createCause || [];
+    // if (loading) {
+    //     return <div>Loading...</div>;
+    // }
 
     // This following section will display the form that takes the input from the user.
     return (

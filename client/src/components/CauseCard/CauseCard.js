@@ -1,10 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import './Causes.css';
 import { motion, AnimatePresence } from 'framer-motion';
-// import charity1 from '../../assets/charity1.png';
-
-
+import c6 from '../../assets/charity6.png';
 
 const CauseCard = ({ name, causeId, description }) => {
 
@@ -20,9 +17,7 @@ const CauseCard = ({ name, causeId, description }) => {
             type: "spring",
             when: 'beforeChildren', staggerChildren: 0.1,
             staggerDirection: 1,
-
         },
-
     },
     exit: {
         scale: "-100vw",
@@ -51,7 +46,7 @@ const cardVariants = {
       whileHover={{ y: -10 }}
     >
       <div className="partnerCard">
-        <img className="imgCard" alt={causeId} />
+        <img className="imgCard" alt={causeId} src={c6}/>
       </div>
       <div className="descriptionBox">
         <p className="partnerP">

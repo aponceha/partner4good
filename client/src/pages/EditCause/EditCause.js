@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useMutation } from '@apollo/client';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { CREATE_CAUSE } from '../../utils/mutations';
+import { useNavigate } from 'react-router-dom';
+import { EDIT_CAUSE } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-import ph from '../../assets/placeholder.png';
 import './EditCause.css';
 
+import UserContext from '../../providers/userContext';
+
 export default function EditCause() {
+    const { user } = useContext(UserContext);
+
+    console.log(user);
+    
     const navigate = useNavigate();
+
     const [form, setForm] = useState({
         name: '',
         description: '',
@@ -19,8 +25,8 @@ export default function EditCause() {
     });
     // idk how to include categoryId in here ^
 
-    const [editUser, { err, data }] = useMutation(CREATE_CAUSE);
-    const [createError, setCreateError] = useState(false);
+    const [editUser, { err, data }] = useMutation(EDIT_CAUSE);
+    const [editError, setEditError] = useState(false);
     const updateForm = (e) => {
         const { name, value } = e.target
         setForm({
@@ -43,7 +49,7 @@ export default function EditCause() {
             navigate("/my-cause");
         }
         catch (err) {
-            setCreateError(true)
+            setEditError(true)
         };
     }
 

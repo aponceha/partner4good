@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
+import { QUERY_SINGLE_CAUSE } from '../../utils/queries';
+
 import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
@@ -7,8 +11,9 @@ import './Cause.css';
 
 
 
-export default function CausePage() {
+export default function Cause() {
 
+    
     const containerVariants = {
         hidden: {
             opacity: 0,
@@ -28,7 +33,6 @@ export default function CausePage() {
           transition: { ease: "easeInOut" },
         },
       };
-    
       const cardVariants = {
         hidden: {
           scale: 0,
@@ -45,6 +49,17 @@ export default function CausePage() {
         },
       };
 
+    const [causeData, setCauseData] = useState({});
+    
+    const causeId = '6429e7c38db07401c2193519';
+    const { loading, data } = useQuery(QUERY_SINGLE_CAUSE, {
+        variables: { causeId: causeId },
+      });
+ 
+    if (loading) {
+        return <div>Loading...</div>;
+      }
+
     return (
         <div className="aboutContainer">
             <div className = "mainContainer">
@@ -56,26 +71,17 @@ export default function CausePage() {
                     <img className = "imgPartner" src ={charity6} alt= "placeholder"/>
                     </div>
                     <div className = "dataList">
-                        <h2 className = "h2Name">Help for Homeless</h2>
-                        <li>Founded:</li>
-                        <li>Headquarters:</li>
-                        <li>Contact:</li>
-                        <li>Email:</li>
-                        <li>Website:</li>
-                        <li>Category:</li>
+                        <h2 className = "h2Name">{data.cause.name}</h2>
+                        <li>Headquarters: {data.cause.headquarters}</li>
+                        <li>Contact: {data.cause.contactName}</li>
+                        <li>Email: {data.cause.contactEmail}</li>
+                        <li>Website: <a className="causeSiteLink" 
+                        href={data.cause.websiteLink}>View Site</a></li>
+                        <li>Cause Category: {data.cause.category.name}</li>
                     </div>
                 </div>
                 <p className = "descriptionDiv">
-                    Covenant House is the largest agency in Canada 
-                    serving youth who are homeless, trafficked or at risk.
-                     Covenant House is inclusive, intentional and impactful.
-                      As a leader in the sector, we advocate so that all 
-                      youth can have lives free from homelessness and 
-                      trafficking. Our donors allow us to meet the emerging
-                       needs of our youth and accelerate our work. 
-                       Our comprehensive youth-driven programming is centred 
-                       on unconditional love, absolute respect and relentless 
-                       engagement.
+                    {data.cause.description}
                     </p>
 
                 <p className = "comingSoon"> Coming Soon.. </p>

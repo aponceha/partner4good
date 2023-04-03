@@ -58,7 +58,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 65%;
+    height: 50%;
     position: relative;
     width: 100%;
 }
@@ -79,13 +79,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    height: 600px;
 }
 
-.partnerP {
-    
-}
-.p1 {
+/* .p1 {
     background-image: url(../../assets/charity1.png);
 }
 .p2 {
@@ -102,7 +99,7 @@
 }
 .p6 {
     background-image: url(../../assets/charity6.png);
-}
+} */
 
 .descriptionBox {
     display: flex;
@@ -110,7 +107,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 35%;
+    height: 50%;
     background-color: var(--bg-lt-blue);
     z-index: 2;
     border-radius: 0px 0 10px 10px;
@@ -284,4 +281,3 @@
     }
     
 }
-

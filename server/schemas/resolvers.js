@@ -61,32 +61,26 @@ const resolvers = {
     createCause: async (parent, args, context) => {
       if (context.user) {
         // only logged in users
-        const newCause = await Cause.create({
-          name: args.causeInput.name,
-          description: args.causeInput.description,
-          headquarters: args.causeInput.headquarters,
-          contactName: args.causeInput.contactName,
-          // contact email linked is the one who creates the cause
-          contactEmail: context.user.email,
-          // contactEmail: args.causeInput.contactEmail,
-          websiteLink: args.causeInput.websiteLink,
-          category: args.causeInput.categoryId,
-          // user linked is the one who creates the cause
-          user: context.user._id,
-        });
-        // DO WE NEED TO UPDATE USER?
-        // await User.findOneAndUpdate(
-        //     { _id: context.user._id },
-        //     { $addToSet: { causes: cause._id } },
-        //   )
+        const newCause =  await Cause.create({
+          name: args.name,
+          description: args.description,
+          headquarters: args.headquarters,
+          contactName: args.contactName,
+          contactEmail: args.contactEmail,
+          websiteLink: args.websiteLink,
+          category: args.category,
+          user: context.user._id
+        })
+        // return await Cause.findOne({ _id: { causeId: newCause._id} }).populate("category").exec();
         return newCause;
+
       } else {
         throw new AuthenticationError("You are not authenticated");
       }
     },
     editCause: async (parent, { causeInput }, context) => {
       if (context.user) {
-        console.log(causeInput);
+        // console.log(causeInput);
         return await Cause.findByIdAndUpdate(
           causeInput.causeId, // when updating this field should be present
           {

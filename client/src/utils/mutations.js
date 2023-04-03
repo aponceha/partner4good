@@ -24,40 +24,24 @@ mutation addUser($email: String!, $password: String!) {
 }
 `;
 
+// export const CREATE_CAUSE = gql`
+// mutation createCause($)
+// `;
 export const CREATE_CAUSE = gql`
-  mutation createCause(
-    $name: String!
-    $description: String!
-    $headquarters: String!
-    $contactName: String!
-    $contactEmail: String!
-    $websiteLink: String!
-    $categoryId: ID!
-  ) {
-    createCause(
-      causeInput: {
-        name: $name
-        description: $description
-        headquarters: $headquarters
-        contactName: $contactName
-        contactEmail: $contactEmail
-        websiteLink: $websiteLink
-        categoryId: $categoryId
-      }
-    ) {
+mutation createCause($name: String!, $description: String!, $headquarters: String!, $contactName: String!, $contactEmail: String!, $websiteLink: String!, $category: ID!) {
+  createCause(name: $name, description: $description, headquarters: $headquarters, contactName: $contactName, contactEmail: $contactEmail, websiteLink: $websiteLink, category: $category){
+    _id
+    name
+    description
+    contactName
+    contactEmail
+    headquarters
+    websiteLink
+    category {
       _id
-      name
-      description
-      headquarters
-      contactName
-      contactEmail
-      websiteLink
-      category {
-        _id
-        name
-      }
     }
   }
+}
 `;
 
 export const EDIT_CAUSE = gql`

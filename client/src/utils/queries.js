@@ -82,24 +82,19 @@ export const QUERY_SINGLE_CAUSE = gql`
   }
 `;
 export const QUERY_ME = gql`
-  query me {
-    me {
+  query myCause {
+    myCause {
       _id
-      email
-      password
-      causes {
+      name
+      description
+      contactName
+      contactEmail
+      category {
         _id
         name
-        description
-        headquarters
-        contactName
-        contactEmail
-        websiteLink
-        category {
-          _id
-          name
-        }
       }
+      headquarters
+      websiteLink
     }
   }
 `; 

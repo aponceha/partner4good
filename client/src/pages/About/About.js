@@ -10,7 +10,6 @@ import charity3 from '../../assets/charity3.png';
 import charity4 from '../../assets/charity4.png';
 import charity6 from '../../assets/charity6.png';
 
-
 import UserContext from '../../providers/userContext';
 
 // const styles = {

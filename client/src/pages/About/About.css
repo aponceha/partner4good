@@ -1,4 +1,3 @@
-
 :root {
     --bg-dk-green: #0D504C;
     --bg-lt-green: #237A74;
@@ -39,7 +38,6 @@
     color: white;
 }
 
-
 .btnSM {
     height: 40px;
     width: fit-content;
@@ -64,8 +62,8 @@
     font-size: 0.75rem;
     cursor: pointer;
     border: none;
-
 }
+
 .btnSMC:hover {
     scale: 1.02;
     color:rgb(240, 237, 237);
@@ -75,12 +73,11 @@
 .fypGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height:420px;
+    height:800px;
     background-color: var(--bg-dk-green);
     row-gap: 2rem;
     column-gap: 2rem;
     padding: 3rem 1.5rem;
-
 }
 
 .fypDiv {
@@ -102,7 +99,6 @@
     z-index: -1;
     width: 100%;
     position: relative;
-    
 }
 
 .h1WWA {
@@ -135,15 +131,11 @@
 .wwaImg {
     height: auto;
     width: 100%;
-
-    
 }
 
 .pBorder1 {
     padding: 0rem;
 }
-
-.partnerCard {}
 
 .imgCard1 {
     position: absolute;
@@ -151,7 +143,6 @@
     border-radius: 10px 10px 0 0;
     height: 100%;
     width: 100%;
-
 }
 
 .descriptionBox1 {
@@ -169,7 +160,6 @@
     line-height: 1.2rem;
     padding: 5px 10px 2px 10px;
     overflow: hidden;
-
 }
 
 .partnerP {
@@ -217,8 +207,13 @@
     .descriptionBox1 {
         height:55%;
     }
-
-
+    .fypGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1rem 4%;
+        height: 1500px;
+        row-gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -230,9 +225,8 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 1rem 4%;
-        height: 1000px;
+        height: 2200px;
         row-gap: 1rem;
-        
     }
 
     .partnerCard1 {
@@ -251,17 +245,18 @@
         width: 100%;
         height: 250px;
     }
+
     .pWWA {
         height: 35%;
         width: 40%;
         font-size: 0.75rem;
     }
-    .h1WWA {
-    }
+
     .wwaImg {
         height: 100%;
         width: 100%;
     }
+
     .pBorder1 {
         padding: 0rem;
     }
@@ -269,12 +264,15 @@
     .seemore1 {
         font-size: 0.5rem;
     }
+
     .h1FYP {
         font-size: 1rem;
     }
+
     .btnSMC {
         font-size: 0.5rem;
     }
+    
     .btnSM {
         font-size: 0.5rem;
     }
@@ -285,7 +283,7 @@
         height: 163px;
     }
     .fypGrid {
-        height: 1100px;
+        height: 2200px;
     }
 
     .partnerCard1 {
@@ -301,4 +299,3 @@
         font-size: 0.4rem;
     }
 }
-

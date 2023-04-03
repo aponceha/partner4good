@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useContext } from 'react'
 import { useMutation } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
@@ -9,8 +10,6 @@ import UserContext from '../../providers/userContext';
 
 export default function EditCause() {
     const { user } = useContext(UserContext);
-
-    console.log(user);
     
     const navigate = useNavigate();
 
@@ -23,8 +22,7 @@ export default function EditCause() {
         websiteLink: '',
         category: ''
     });
-    // idk how to include categoryId in here ^
-
+    
     const [editUser, { err, data }] = useMutation(EDIT_CAUSE);
     const [editError, setEditError] = useState(false);
     const updateForm = (e) => {
@@ -34,7 +32,6 @@ export default function EditCause() {
             [name]: value,
         });
     };
-
     // This function will handle the submission.
     const editCauseFormHandler = async (e) => {
         e.preventDefault();
@@ -52,43 +49,6 @@ export default function EditCause() {
             setEditError(true)
         };
     }
-
-    // const containerVariants = {
-    //     hidden: {
-    //         opacity: 0,
-    //     },
-    //     visible: {
-    //         opacity: 1,
-    //         transition: { 
-    //             type: "spring", 
-    //             when: 'beforeChildren', staggerChildren: 0.1,
-    //             staggerDirection: 1,
-
-    //         },
-
-    //     },
-    //     exit: {
-    //       scale: "-100vw",
-    //       transition: { ease: "easeInOut" },
-    //     },
-    //   };
-
-    //   const cardVariants = {
-    //     hidden: {
-    //       scale: 0,
-    //       opacity: 0,
-    //     },
-    //     visible: {
-    //       scale: 1,
-    //       opacity: 1,
-    //       transition: { type: "spring", stiffness: 50 },
-    //     },
-    //     exit: {
-    //       x: "-100vw",
-    //       transition: { ease: "easeInOut" },
-    //     },
-    //   };
-
     // This following section will display the form that takes the input from the user.
     return (
         <div className="aboutContainer">

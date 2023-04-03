@@ -1,4 +1,3 @@
-// from activity 21.20
 import { gql } from '@apollo/client';
 
 export const QUERY_USER = gql`
@@ -9,13 +8,6 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-
-// myCause: Cause
-// cause(causeId: ID!): Cause!
-// causes: [Cause]
-// causesCat(categoryId: ID!): [Cause]
-// categories: [Category]
 
 export const QUERY_USERS = gql`
   query users {
@@ -39,6 +31,7 @@ export const QUERY_USERS = gql`
     }
   }
 `;
+
 export const QUERY_CAUSES = gql`
   query causes {
     causes {
@@ -56,6 +49,7 @@ export const QUERY_CAUSES = gql`
     }
   }
 `;
+
 export const QUERY_CATEGORIES = gql`
   query categories {
     categories {
@@ -64,6 +58,7 @@ export const QUERY_CATEGORIES = gql`
     }
   }
 `;
+
 export const QUERY_SINGLE_CAUSE = gql`
   query cause($causeId: ID!) {
     cause(causeId: $causeId) {
@@ -81,6 +76,7 @@ export const QUERY_SINGLE_CAUSE = gql`
     }
   }
 `;
+
 export const QUERY_ME = gql`
   query myCause {
     myCause {

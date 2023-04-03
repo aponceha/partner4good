@@ -42,7 +42,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
 
     createCause(name: String!, description: String!, headquarters: String!, contactName: String!, contactEmail: String!, websiteLink: String!, category: ID!): Cause!
-    editCause(causeInput: CauseInput!): Cause!
+    editCause(name: String!, description: String!, headquarters: String!, contactName: String!, contactEmail: String!, websiteLink: String!, category: ID!): Cause!
     deleteCause(causeId: ID!): Cause
   }
 

@@ -22,7 +22,6 @@ const causeSchema = mongoose.Schema({
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "category",
-        // required: [true, "Category is required"]
     },
     headquarters: {
         type: String,

@@ -24,7 +24,6 @@ const resolvers = {
     myCause: async (parent, args, context) => {
       // by adding context to our query, we can retrieve the logged in user without specifically searching for them - use to edit and delete their own cause page
       if (context.user) {
-        // should i be looking for user._id or cause._id?
         return Cause.findOne({ user: context.user._id })
           .populate("category")
           .exec();
@@ -61,7 +60,7 @@ const resolvers = {
     createCause: async (parent, args, context) => {
       if (context.user) {
         // only logged in users
-        const newCause =  await Cause.create({
+        const newCause = await Cause.create({
           name: args.name,
           description: args.description,
           headquarters: args.headquarters,
@@ -71,26 +70,25 @@ const resolvers = {
           category: args.category,
           user: context.user._id
         })
-        // return await Cause.findOne({ _id: { causeId: newCause._id} }).populate("category").exec();
         return newCause;
 
       } else {
         throw new AuthenticationError("You are not authenticated");
       }
     },
-    editCause: async (parent, { causeInput }, context) => {
+    editCause: async (parent, args, context) => {
       if (context.user) {
-        // console.log(causeInput);
         return await Cause.findByIdAndUpdate(
-          causeInput.causeId, // when updating this field should be present
+          {id: cause._id}, // when updating this field should be present
           {
-            name: causeInput.name,
-            description: causeInput.description,
-            contactName: causeInput.contactName,
-            contactEmail: causeInput.contactEmail,
-            category: causeInput.categoryId,
-            headquarters: causeInput.headquarters,
-            websiteLink: causeInput.websiteLink,
+            name: args.name,
+            description: args.description,
+            headquarters: args.headquarters,
+            contactName: args.contactName,
+            contactEmail: args.contactEmail,
+            websiteLink: args.websiteLink,
+            category: args.category,
+            user: context.user._id
           },
           { new: true, runValidators: true }
         ).populate("category").exec();

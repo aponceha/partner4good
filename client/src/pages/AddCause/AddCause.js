@@ -1,12 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { useMutation } from '@apollo/client';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CREATE_CAUSE } from '../../utils/mutations';
-import Auth from '../../utils/auth';
 import './AddCause.css';
-
-// import UserContext from '../../providers/userContext';
 
 export default function AddCause() {
     const [createCause, { err, data }] = useMutation(CREATE_CAUSE);
@@ -37,23 +34,12 @@ export default function AddCause() {
             const { data } = await createCause({
                 variables: { name: form.name, description: form.description, headquarters: form.headquarters, contactName: form.contactName, contactEmail: form.contactEmail, websiteLink: form.websiteLink, category: form.category }
             });
-            console.log(createCause)
-            console.log("im trying!")
-            // Auth.login(data.createCause.token);
             navigate("/my-cause");
         }
         catch (err) {
-            console.log("i failed :(")
             setCreateError(true)
         };
     }
-
-           // const { loading, data } = useMutation(CREATE_CAUSE);
-    // const cause = data?.createCause || [];
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
-
     // This following section will display the form that takes the input from the user.
     return (
         <div className="aboutContainer">

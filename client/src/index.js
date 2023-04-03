@@ -12,9 +12,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './providers/userContext';
+import { MyCauseProvider } from './providers/myCauseContext';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,9 +43,11 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <UserProvider>
+        <MyCauseProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
+        </MyCauseProvider>
       </UserProvider>
     </ApolloProvider>
   </React.StrictMode>

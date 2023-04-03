@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@apollo/client';
@@ -8,16 +9,22 @@ import CauseCard from '../../components/CauseCard/CauseCard';
 import './Causes.css';
 
 export default function Causes() {
-    // const [causes1, setCauses] = useState([]);
+
     const [filter, setFilter] = useState(false);
     const { loading, data } = useQuery(QUERY_CAUSES);
     const [selectCategory, setSelectCategory] = useState(null);
     const [filteredCauses, setFilteredCauses] = useState([]);
 
     const handleChange = (e) => {
-        setSelectCategory(e.target.value);
-        const filteredCauses = data.causes.filter(cause => cause.category.name === e.target.value);
-        setFilteredCauses(filteredCauses);
+        if (e.target.value === 'All') {
+            setSelectCategory(null);
+            setFilteredCauses(data.causes);
+        }
+        else {
+            setSelectCategory(e.target.value);
+            const filteredCauses = data.causes.filter(cause => cause.category.name === e.target.value);
+            setFilteredCauses(filteredCauses);
+        }
     };
 
     const causes = data?.causes || [];
@@ -58,7 +65,6 @@ export default function Causes() {
         },
     };
 
-
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -70,7 +76,6 @@ export default function Causes() {
             animate="visible"
             exit="exit"
         >
-
             <div className="filterDiv">
                 <AnimatePresence>
                     <motion.button className="filter"
@@ -90,26 +95,29 @@ export default function Causes() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -400, opacity: 0 }}
                         transition={{ duration: 0.1, type: "spring", stiffness: 120 }}
-
                     >
                         <div className="listRow">
-                            <input className="checkBox" type="checkbox" value="Environment" onChange={handleChange}>
+                            <input className="checkBox" type="radio" name="cat-radio" value="Environment" onChange={handleChange}>
                             </input><span className="filCat">Environment</span>
                         </div>
                         <div className="listRow">
-                            <input className="checkBox" type="checkbox" value="Diversity, Equity, Inclusion"
+                            <input className="checkBox" type="radio" name="cat-radio" value="Diversity, Equity, Inclusion"
                                 onChange={handleChange}></input><span className="filCat" >Diversity, Equity, Inclusion</span>
                         </div>
                         <div className="listRow">
-                            <input className="checkBox" type="checkbox" value="LGBTQ" onChange={handleChange}></input><span className="filCat">LGBTQ</span>
+                            <input className="checkBox" type="radio" name="cat-radio" value="LGBTQ" onChange={handleChange}></input><span className="filCat">LGBTQ</span>
                         </div>
                         <div className="listRow">
-                            <input className="checkBox" type="checkbox" value="Homelessness" onChange={handleChange}></input>
+                            <input className="checkBox" type="radio" name="cat-radio" value="Homelessness" onChange={handleChange}></input>
                             <span className="filCat">Homelessness</span>
                         </div>
                         <div className="listRow">
-                            <input className="checkBox" type="checkbox" value="Food Security" onChange={handleChange}></input>
+                            <input className="checkBox" type="radio" name="cat-radio" value="Food Security" onChange={handleChange}></input>
                             <span className="filCat">Food Security</span>
+                        </div>
+                        <div className="listRow">
+                            <input className="checkBox" type="radio" name="cat-radio" value="All" onChange={handleChange}></input>
+                            <span className="filCat">ALL</span>
                         </div>
                     </motion.div>}
                 </AnimatePresence>
@@ -122,22 +130,24 @@ export default function Causes() {
                     animate="visible"
                     exit="exit"
                 >
-                    {/* {loading ? (
-                        <div>Loading...</div>): */}
-                    {selectCategory ? filteredCauses.map(cause => (
+
+                    {selectCategory ? filteredCauses.map((cause, index) => (
                         <CauseCard
                             key={cause._id}
                             name={cause.name}
                             causeId={cause._id}
                             description={cause.description}
+                            imgpath={`c${index}`}
+
                         />
                     )) :
-                        (causes.map(cause => (
+                        (causes.map((cause, index) => (
                             <CauseCard
                                 key={cause._id}
                                 name={cause.name}
                                 causeId={cause._id}
                                 description={cause.description}
+                                imgpath={`c${index}`}
                             />
                         )))}
                 </motion.div>

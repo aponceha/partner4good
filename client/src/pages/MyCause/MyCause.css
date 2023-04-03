@@ -41,12 +41,28 @@
 
 .rightFloat {
     position: absolute;
-    right: 3%;
-    top: 80px;
+    right: 0;
+    top: -7%;
     z-index: 1;
 
 }
+.descriptionLeft {
+    align-items: left;
+    text-align: left;
+}
+.rowSpaced {
+    margin-bottom: 1rem;
+}
 
+.linkedItem {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+.linkedItem:hover {
+    color: rgb(184, 182, 180)
+
+}
 .editButton:hover {
     scale: 1.1;
     color:rgb(240, 237, 237);

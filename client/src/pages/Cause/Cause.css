@@ -155,8 +155,7 @@
 .causeSiteLink:hover {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 400;
+    scale: 2;
 }
 
 .boldedText {

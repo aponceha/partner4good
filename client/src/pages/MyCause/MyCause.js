@@ -30,20 +30,20 @@ export default function MyCausePage() {
                                 <div className="m-2">
                                     <h2 className="h2Name" placeholder="Name">{myCause.myCauseData.myCause.name}</h2>
                                 </div>
-                                <h4>Headquarters: {myCause.myCauseData.myCause.headquarters}</h4>
-                                <h4>Contact: {myCause.myCauseData.myCause.contactName}</h4>
-                                <div className="d-flex">
-                                    <h4>Email: </h4>
-                                    <a className="mx-3" href={myCause.myCauseData.myCause.contactEmail}>View Site</a>
+                                <h4 className = "rowSpaced">Headquarters: {myCause.myCauseData.myCause.headquarters}</h4>
+                                <h4  className = "rowSpaced">Contact: {myCause.myCauseData.myCause.contactName}</h4>
+                                <div className="d-flex rowSpaced">
+                                    <h4>Email: {myCause.myCauseData.myCause.contactEmail}</h4>
+                        
                                 </div>
 
-                                <div className="d-flex">
+                                <div className="d-flex rowSpaced">
                                     <h4>Website</h4>
-                                    <a className="mx-3" href={myCause.myCauseData.myCause.websiteLink}>View Site</a>
+                                    <a className="mx-3 linkedItem" href={myCause.myCauseData.myCause.websiteLink}>View Site</a>
                                 </div>
-                                <h4>Category: {myCause.myCauseData.myCause.category.name}</h4>
-                                <div>
-                                    <h4>Description: </h4>
+                                <h4 className = "rowSpaced">Category: {myCause.myCauseData.myCause.category.name}</h4>
+                                <div  className = "rowSpaced">
+                                    <h4 className="descriptionLeft">Description: </h4>
                                     <p className="descriptionDiv">{myCause.myCauseData.myCause.description}</p>
                                 </div>
                             </div>
@@ -52,7 +52,6 @@ export default function MyCausePage() {
                             <button className="editButton rightFloat"
                                 onClick={() => window.location.href = '/addcause'}
                             > Add My Cause </button>
-                            <h4>you did it!!</h4>
                         </div>
                     }
                 </div>

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ph from "./assets/placeholder.png";
+import './pages/MyCause/MyCause.css';
 class CloudinaryUploadWidget extends Component {
   componentDidMount() {
     var myWidget = window.cloudinary.createUploadWidget(
@@ -22,10 +24,16 @@ class CloudinaryUploadWidget extends Component {
   }
   render() {
     return (
-      <button id="upload_widget" className="cloudinary-button">
-        Upload
-      </button>
-    );
+        <div className="imgDivTainer1" style={{ position: "relative" }}>
+          <img className="imgPartner" src={ph} alt="placeholder" />
+          <button
+            id="upload_widget"
+            className="cloudinary-button"
+          >
+            Upload
+          </button>
+        </div>
+    )
   }
 }
 export default CloudinaryUploadWidget;

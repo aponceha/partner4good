@@ -14,9 +14,9 @@ export default function MyCausePage() {
                 <div className="mainGrid">
 
                     <div className="container m-0 p-0 ">
-                        <img className="imgPartner mx-auto" src={ph} alt="placeholder" />
+                        {/* <img className="imgPartner mx-auto" src={ph} alt="placeholder" /> */}
                         <div className="middle">
-                            <button className="imgUpload rounded p-3">Coming Soon!</button>
+                            {/* <button className="imgUpload rounded p-3">Coming Soon!</button> */}
                             <CloudinaryUploadWidget />
                         </div>
 

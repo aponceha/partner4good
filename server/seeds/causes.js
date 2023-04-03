@@ -14,10 +14,10 @@ const createCauses = async () => {
         },
         { 
             name: 'The Inclusion Project',
-            description: 'The Inclusion Project (TIP) aims to advance equity, diversity, and inclusion in Canadian society by actively engaging partners and decisionmakers, through research, knowledge development and community. Our Accessibility, Racial Equity, Diversity, and Inclusion (AREDI+) process takes an intersectional and iterative approach to addressing complex issues of race-based, gendered and other forms of discrimination. Our Anti-Racism Anti-Harassment (ARAH) framework covers specific action to eliminate behaviors and policies that may prevent racialized Canadians and newcomers to Canada from accessing equitable opportunities based on racial, gendered and (dis)ability-based discrimination.',
+            description: 'The Inclusion Project (TIP) aims to advance equity, diversity, and inclusion in Canadian society by actively engaging partners and decisionmakers, through research, knowledge development and community. Our Accessibility, Racial Equity, Diversity, and Inclusion (AREDI+) process takes an intersectional and iterative approach to addressing complex issues of race-based, gendered and other forms of discrimination.',
             contactName: 'Timmy',
             contactEmail: 'tim@test.com',
-            category: 'Environment',
+            category: 'Diversity, Equity, Inclusion',
             headquarters: 'Toronto',
             user: 'tim@test.com',
             websiteLink: 'https://www.theinclusionproject.com/'
@@ -27,7 +27,7 @@ const createCauses = async () => {
             description: 'Egale is Canadas leading organization for 2SLGBTQI people and issues. We improve and save lives through research, education, awareness, and by advocating for human rights and equality in Canada and around the world. Our work helps create societies and systems that reflect the universal truth that all persons are equal and none is other.',
             contactName: 'Elliot',
             contactEmail: 'elliot@test.com',
-            category: 'Environment',
+            category: 'LGBTQ',
             headquarters: 'Montreal',
             user: 'elliot@test.com',
             websiteLink: 'https://egale.ca/'
@@ -37,7 +37,7 @@ const createCauses = async () => {
             description: 'The Canadian Alliance to End Homelessness leads a national movement of individuals, organizations and communities working together to end homelessness in Canada.',
             contactName: 'Cameron',
             contactEmail: 'cameron@test.com',
-            category: 'Environment',
+            category: 'Homelessness',
             headquarters: 'Vancouver',
             user: 'cameron@test.com',
             websiteLink: 'https://caeh.ca/'
@@ -47,10 +47,20 @@ const createCauses = async () => {
             description: 'Food Secure Canada is a pan-Canadian alliance of organizations and individuals working together to advance food security and food sovereignty through three interlocking goals: zero hunger, healthy and safe food, and sustainable food systems.',
             contactName: 'Frankie',
             contactEmail: 'frankie@test.com',
-            category: 'Environment',
+            category: 'Food Security',
             headquarters: 'Saskatoon',
             user: 'frankie@test.com',
             websiteLink: 'https://foodsecurecanada.org/'
+        },
+        { 
+            name: 'CAMH',
+            description: 'Many people do not see mental illness in the same way, or even the same category, as other diseases medical science is working hard to find cures for. But Mental Health is Health. And with every new discovery, CAMH moves closer to treatments that will change the course of mental health forever.',
+            contactName: 'Jess',
+            contactEmail: 'jess@test.com',
+            category: 'Homelessness',
+            headquarters: 'Whitehorse',
+            user: 'jess@test.com',
+            websiteLink: 'https://www.camh.ca/'
         }
     ];
 

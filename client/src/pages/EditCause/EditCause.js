@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useMutation } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
-import { CREATE_CAUSE } from '../../utils/mutations';
-import './AddCause.css';
+import { EDIT_CAUSE } from '../../utils/mutations';
+import Auth from '../../utils/auth';
+import './EditCause.css';
 
-export default function AddCause() {
-    const [createCause, { err, data }] = useMutation(CREATE_CAUSE);
+import UserContext from '../../providers/userContext';
+
+export default function EditCause() {
+    const { user } = useContext(UserContext);
+    
     const navigate = useNavigate();
+
     const [form, setForm] = useState({
         name: '',
         description: '',
@@ -17,7 +22,9 @@ export default function AddCause() {
         websiteLink: '',
         category: ''
     });
-    const [createError, setCreateError] = useState(false);
+    
+    const [editUser, { err, data }] = useMutation(EDIT_CAUSE);
+    const [editError, setEditError] = useState(false);
     const updateForm = (e) => {
         const { name, value } = e.target
         setForm({
@@ -26,26 +33,28 @@ export default function AddCause() {
         });
     };
     // This function will handle the submission.
-    const createCauseFormHandler = async (e) => {
+    const editCauseFormHandler = async (e) => {
         e.preventDefault();
         console.log(form)
 
         try {
-            const { data } = await createCause({
-                variables: { name: form.name, description: form.description, headquarters: form.headquarters, contactName: form.contactName, contactEmail: form.contactEmail, websiteLink: form.websiteLink, category: form.category }
+            const { data } = await editUser({
+                variables: { ...form }
             });
+
+            Auth.login(data.editCause.token);
             navigate("/my-cause");
         }
         catch (err) {
-            setCreateError(true)
+            setEditError(true)
         };
     }
     // This following section will display the form that takes the input from the user.
     return (
         <div className="aboutContainer">
             <div className="mainGrid1">
-                <form onSubmit={createCauseFormHandler}>
-                    <h2 className="h2Name">Create my Cause</h2>
+                <form onSubmit={editCauseFormHandler}>
+                    <h2 className="h2Name">Edit my Cause</h2>
                     <div className="form-group row1">
                         <label htmlFor="name" className="formTitle">Name</label>
                         <input
@@ -189,7 +198,7 @@ export default function AddCause() {
                     </div>
                     <div>
                         <button type="submit" className="submitButton" onClick={() => window.location.href = '/my-cause'}>
-                            Submit
+                            Submit Changes
                         </button>
                     </div>
                 </form>

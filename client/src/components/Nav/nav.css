@@ -41,6 +41,8 @@
 }
 
 .links {
+    display: flex;
+    align-items: center;
     color: white;
     padding: 0 1rem;
     text-decoration: none; 

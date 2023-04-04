@@ -1,12 +1,17 @@
 # Partner For Good
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![github][github-shield]][github-url]
+
 ## Description
 
 Environmental and social governance (ESG) has become a hot topic in public markets over the last few years, with securities commissions like the OSC in Canada, or the SEC in the U.S., considering making ESG a reporting requirement for public companies. 
 
 Partner for Good is a platform that allows charities, not-for-profits, and non-profit organizations to create profiles that demonstrate how they are contributing to a social or environmental good through creating an organizational profile. Companies interested in bolstering their ESG involvement and reporting can visit the Partner for Good platform to find causes that fulfill their particular ESG goals, while maintaining comfort that each cause listed on the platform has been vetted and is a credible organization. 
 
-This application uses the MERN stack and GraphQL, and is hosted & deployed on Heroku.
+This application uses the MERN stack and GraphQL, and is hosted & deployed on Heroku. Link to deployed application: https://partner-for-good1.herokuapp.com/
 
 ## Table of Contents
 

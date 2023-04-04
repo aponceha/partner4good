@@ -55,11 +55,11 @@ const createCauses = async () => {
         { 
             name: 'CAMH',
             description: 'Many people do not see mental illness in the same way, or even the same category, as other diseases medical science is working hard to find cures for. But Mental Health is Health. And with every new discovery, CAMH moves closer to treatments that will change the course of mental health forever.',
-            contactName: 'Jess',
-            contactEmail: 'jess@test.com',
+            contactName: 'Frankie',
+            contactEmail: 'frankie@test.com',
             category: 'Homelessness',
             headquarters: 'Whitehorse',
-            user: 'jess@test.com',
+            user: 'frankie@test.com',
             websiteLink: 'https://www.camh.ca/'
         }
     ];
